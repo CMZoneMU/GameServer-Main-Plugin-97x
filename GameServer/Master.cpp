@@ -186,23 +186,23 @@ void cMaster::Run(int aIndex)
 			}
 		}
 
-		// correção mana e bp apos resetar
+		// [Novo]: Correção mana e bp apos resetar
 
 		gObj[aIndex].AddLife = 0;
 		gObj[aIndex].AddMana = 0;
 		gObj[aIndex].AddBP = 0;
 
-		// recalcula primeiro
+		// [Novo]: Recalcula primeiro
 		gObj[aIndex].MaxLife = Func.GetStatus(&gObj[aIndex], Class, 0);
 		gObj[aIndex].MaxMana = Func.GetStatus(&gObj[aIndex], Class, 1);
 		gObjSetBP(aIndex);
 
-		// depois preenche os atuais
+		// [Novo]: Depois preenche os atuais
 		gObj[aIndex].Life = gObj[aIndex].MaxLife;
 		gObj[aIndex].Mana = gObj[aIndex].MaxMana;
 		gObj[aIndex].BP = gObj[aIndex].MaxBP / 2;
 
-		// força recálculo completo antes de enviar
+		// [Novo]: Força recálculo completo antes de enviar
 		gObjCalCharacter(aIndex);
 		gObjCalcMaxLifePower(aIndex);
 
