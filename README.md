@@ -36,3 +36,16 @@ Este update traz uma evolução completa do sistema, focada em:
   - Client ⇄ Server
 
 ---
+
+## 🖥️ Melhorias na Interface
+
+- 📊 Título dinâmico na janela do jogo:
+  - Ping
+  - FPS
+  - Resets
+  - Cash
+  - VIP
+
+- ⚡ Atualização em tempo real
+
+---
