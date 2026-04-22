@@ -23,7 +23,7 @@ Este update traz uma evolução completa do sistema, focada em:
 
 ---
 
-## ❤️ Correção no Sistema de Reset
+## ❤️ Correção no Sistema de Reset / Master Reset
 
 - Corrigido bug crítico:
   - ❌ Mana zerando/travando após reset
