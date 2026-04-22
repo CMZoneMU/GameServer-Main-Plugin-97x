@@ -1,9 +1,18 @@
-# GameServer-Main-Plugin-97x
-GameServer versão 0.96.40T - Main Unpacked 97.04
+## 📦 Informações
 
-🚀 Resumo Geral das Correções e Implementações
+**GameServer versão:** 0.96.40T  
+**Main:** Unpacked 97.04  
 
-Este update traz uma evolução completa do sistema, focada em estabilidade, segurança, sincronização em tempo real e melhoria da experiência do jogador.
+---
+
+## 🧾 Resumo das Correções e Implementações
+
+Este update traz uma evolução completa do sistema, focada em:
+
+- 🔒 Estabilidade
+- 🛡️ Segurança
+- 🔄 Sincronização em tempo real
+- 🎮 Melhor experiência do jogador
 
 Correção no Sistema reset
 Corrigido bug crítico de:
