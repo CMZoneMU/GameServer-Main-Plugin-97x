@@ -49,3 +49,37 @@ Este update traz uma evolução completa do sistema, focada em:
 - ⚡ Atualização em tempo real
 
 ---
+
+## ⚙️ F9 Stability Fix
+
+### Corrigido:
+- Crash ao minimizar  
+- Falha ao restaurar  
+- Conflito com hotkeys  
+
+- 🔄 Novo sistema híbrido de teclado  
+
+## ⌨️ Input Control (Hidden Mode)
+
+- 🔒 Bloqueio total de teclas em segundo plano  
+
+### Evita:
+- Abrir inventário  
+- Usar skills  
+- Ações indevidas  
+
+- ✅ Apenas **F9** permanece ativo 
+
+## 🧩 Minimize System (F9 + Tray)
+
+- 🟡 Minimizar para bandeja (tray)  
+- 🎯 Ícone custom (`Main.ico`)  
+
+### 🔄 Restaurar
+- Tecla **F9**
+- Clique no ícone da bandeja  
+
+### 📋 Menu no Tray
+- Abrir  
+- Fechar  
+---
