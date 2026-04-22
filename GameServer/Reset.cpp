@@ -134,7 +134,13 @@ void cReset::Run(int aIndex)
 					{
 						if (gObj[aIndex].MapNumber == 9 || gObj[aIndex].MapNumber >= 11 && gObj[aIndex].MapNumber <= 16)
 						{
-							// Empty
+							// [Novo]: teleporta para Lorencia, pois o personagem pode estar em um local 
+							// onde não tem como resetar, como o interior do castelo ou a arena
+							// por exemplo.
+							int X = 133 + rand() % 15;
+							int Y = 118 + rand() % 15;
+
+							gObjTeleport(aIndex, 0, X, Y);	
 						}
 						else
 						{
@@ -158,23 +164,23 @@ void cReset::Run(int aIndex)
 						}
 					}
 
-					// correção mana e bp apos resetar
+					// [Novo]: correção mana e bp apos resetar
 
 					gObj[aIndex].AddLife = 0;
 					gObj[aIndex].AddMana = 0;
 					gObj[aIndex].AddBP = 0;
 
-					// recalcula primeiro
+					// [Novo]: recalcula primeiro
 					gObj[aIndex].MaxLife = Func.GetStatus(&gObj[aIndex], Class, 0);
 					gObj[aIndex].MaxMana = Func.GetStatus(&gObj[aIndex], Class, 1);
 					gObjSetBP(aIndex);
 
-					// depois preenche os atuais
+					// [Novo]: depois preenche os atuais
 					gObj[aIndex].Life = gObj[aIndex].MaxLife;
 					gObj[aIndex].Mana = gObj[aIndex].MaxMana;
 					gObj[aIndex].BP = gObj[aIndex].MaxBP / 2;
 
-					// força recálculo completo antes de enviar
+					// [Novo]: força recálculo completo antes de enviar
 					gObjCalCharacter(aIndex);
 					gObjCalcMaxLifePower(aIndex);
 
@@ -191,7 +197,7 @@ void cReset::Run(int aIndex)
 						Manager.ExecFormat("UPDATE Character SET Resets = Resets + 2, ResetsDay = ResetsDay + 2, ResetsWeek = ResetsWeek + 2, ResetsMonth = ResetsMonth + 2 WHERE Name = '%s'", gObj[aIndex].Name);
 					}
 
-					Connect.UpdateCharacterInfo(aIndex); // Envia as informações de Resets, Cash e Vip para o Main
+					Connect.UpdateCharacterInfo(aIndex); // [Novo]: Envia as informações de Resets, Cash e Vip para o Main
 					Func.MsgOutput(aIndex, 1, "Reset efetuado com sucesso!");
 					Func.MsgOutput(aIndex, 1, "Resets: %d / Pontos: %d", Custom[aIndex].ResetCount, gObj[aIndex].LevelUpPoint);
 				}
