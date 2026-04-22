@@ -82,4 +82,21 @@ Este update traz uma evolução completa do sistema, focada em:
 ### 📋 Menu no Tray
 - Abrir  
 - Fechar  
+
+---
+
+## 🔢 Auto Reset / Auto Add Fix
+
+- 🛑 Limite máximo por status: **32767**
+
+### 🧠 Sistema inteligente:
+- Bloqueia status que atingirem o limite  
+- Continua distribuindo nos demais  
+
+- 🔄 Para apenas quando **TODOS os status estão full**
+
+### 💬 Mensagem exibida:
+Você atingiu limite de pontos nos Status
+- 🔒 Proteção total contra overflow  
+
 ---
