@@ -652,7 +652,7 @@ struct CHAT_WHISPER
 	BYTE Type;
 };
 
-// Packet Char Info
+// [ novo ] - Protocolo para envio de informações de Resets, Cash e Vip para o Main
 struct PMSG_CUSTOM_CHARACTER_INFO
 {
 	PSBMSG_HEAD h;
@@ -670,6 +670,7 @@ struct PLAYERSTRUCT
 {
 public:
 	PLAYERSTRUCT():
+		// [ novo ]: Adicionado o campo VipDays(0) para armazenar os dias restantes do Vip
 		ResetCount(0), MasterCount(0), VipCount(0), VipDays(0), Vault{0, 0}, Hours(0), Hero(0), Killer(0), Bonus(0), Coin{ 0, 0, 0, 0, 0, 0 }, Jewels{ 0, 0, 0, 0, 0, 0, 0, 0, 0 }, Ware(0), Day(0), Patent(0), Rei(0), MasterPoint(0), Count{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, Waiting(false), Move(false), InEvent(false), Dead(false), Start(false), Helper(false), Pet(false), Delay{ 0, 0, 0 }, Time(0)
 	{
 	}
@@ -677,13 +678,13 @@ public:
 	int     ResetCount;
 	int     MasterCount;
 	int     VipCount;
-	int		VipDays; // novo 
+	int		VipDays; // [ novo ]
 	int     Vault[2];
 	int     Hours;
 	int     Hero;
 	int     Killer;
 	int     Bonus;
-	int     Coin[10];
+	int     Coin[10]; // [ novo ] - Aumentado para 10 posições para armazenar mais tipos de moedas
 	int     Jewels[9];
 	int     Ware;
 	int     Day;
