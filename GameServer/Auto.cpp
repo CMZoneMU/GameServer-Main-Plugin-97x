@@ -41,7 +41,7 @@ void cAutoReset::Run(LPOBJ lpObj)
 						int AddVit = this->AutoStruct[lpObj->m_Index]._Vitality;
 						int AddEne = this->AutoStruct[lpObj->m_Index]._Energy;
 
-						// Se o status ja estiver no limite, nao soma mais nele
+						// [Novo]: Se o status ja estiver no limite, nao soma mais nele.
 						if (lpObj->Strength >= MaxStat)
 						{
 							AddStr = 0;
@@ -78,7 +78,7 @@ void cAutoReset::Run(LPOBJ lpObj)
 							AddEne = MaxStat - lpObj->Energy;
 						}
 
-						// So finaliza se todos os 4 status estiverem no limite
+						// [Novo]: So finaliza se todos os 4 status estiverem no limite
 						if (lpObj->Strength >= MaxStat &&
 							lpObj->Dexterity >= MaxStat &&
 							lpObj->Vitality >= MaxStat &&
@@ -97,7 +97,7 @@ void cAutoReset::Run(LPOBJ lpObj)
 
 						this->AutoStruct[lpObj->m_Index]._Points = AddStr + AddDex + AddVit + AddEne;
 
-						// Se nessa rodada nao ha mais nada para somar, apenas verifica se todos fecharam
+						// [Novo]:Se nessa rodada nao ha mais nada para somar, apenas verifica se todos fecharam.
 						if (this->AutoStruct[lpObj->m_Index]._Points <= 0)
 						{
 							if (lpObj->Strength >= MaxStat &&
@@ -154,7 +154,7 @@ void cAutoReset::Run(LPOBJ lpObj)
 
 						Func.UpdateCharacter(lpObj->m_Index, false);
 
-						// Depois de adicionar, verifica se agora todos ficaram full
+						// [Novo]: Depois de adicionar, verifica se agora todos ficaram full.
 						if (lpObj->Strength >= MaxStat &&
 							lpObj->Dexterity >= MaxStat &&
 							lpObj->Vitality >= MaxStat &&
