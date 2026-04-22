@@ -49,3 +49,54 @@ Este update traz uma evolução completa do sistema, focada em:
 - ⚡ Atualização em tempo real
 
 ---
+
+## ⚙️ F9 Stability Fix
+
+### Corrigido:
+- Crash ao minimizar  
+- Falha ao restaurar  
+- Conflito com hotkeys  
+
+- 🔄 Novo sistema híbrido de teclado  
+
+## ⌨️ Input Control (Hidden Mode)
+
+- 🔒 Bloqueio total de teclas em segundo plano  
+
+### Evita:
+- Abrir inventário  
+- Usar skills  
+- Ações indevidas  
+
+- ✅ Apenas **F9** permanece ativo 
+
+## 🧩 Minimize System (F9 + Tray)
+
+- 🟡 Minimizar para bandeja (tray)  
+- 🎯 Ícone custom (`Main.ico`)  
+
+### 🔄 Restaurar
+- Tecla **F9**
+- Clique no ícone da bandeja  
+
+### 📋 Menu no Tray
+- Abrir  
+- Fechar  
+
+---
+
+## 🔢 Auto Reset / Auto Add Fix
+
+- 🛑 Limite máximo por status: **32767**
+
+### 🧠 Sistema inteligente:
+- Bloqueia status que atingirem o limite  
+- Continua distribuindo nos demais  
+
+- 🔄 Para apenas quando **TODOS os status estão full**
+
+### 💬 Mensagem exibida:
+Você atingiu limite de pontos nos Status
+- 🔒 Proteção total contra overflow  
+
+---
