@@ -1,0 +1,5 @@
+#include "StdAfx.h"
+
+OBJECTSTRUCT* gObj = ( OBJECTSTRUCT* ) ( OBJECT_BASE );
+
+PLAYERSTRUCT Custom[5600];
