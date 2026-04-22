@@ -21,20 +21,18 @@ Este update traz uma evolução completa do sistema, focada em:
 - 🔄 Sincronização em tempo real
 - 🎮 Melhor experiência do jogador
 
-Correção no Sistema reset
-Corrigido bug crítico de:
-Mana zerando/travando
-🔧 Nova ordem correta:
-MaxLife → Life
-MaxMana → Mana
-🔄 Sincronização perfeita Client ⇄ Server
+---
 
-Novas Informações na Janela
-📊 Título na Janela dinâmico com:
-Ping
-FPS
-Resets
-Cash
-VIP
-⚡ Atualização em tempo real
+## ❤️ Correção no Sistema de Reset
 
+- Corrigido bug crítico:
+  - ❌ Mana zerando/travando após reset
+
+- Nova ordem correta:
+  - MaxLife → Life  
+  - MaxMana → Mana  
+
+- 🔄 Sincronização perfeita entre:
+  - Client ⇄ Server
+
+---
