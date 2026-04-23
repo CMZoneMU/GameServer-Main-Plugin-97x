@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="CustomInfo">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="StdAfx">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="CustomInfo\CCRC32">
+      <UniqueIdentifier>{45c68acb-d8b4-464a-98b6-1a9783efe327}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomInfo\MemScript">
+      <UniqueIdentifier>{90045f51-7e22-4de2-a4ee-3acfc9f6dced}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomInfo\ThemidaSDK">
+      <UniqueIdentifier>{4f3c4d56-2404-4aca-b379-1e57a12f3c0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomInfo\CustomInfo">
+      <UniqueIdentifier>{b09981fe-54a6-4e57-afe8-45ca77ad077a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>StdAfx</Filter>
+    </ClCompile>
+    <ClCompile Include="CCRC32.cpp">
+      <Filter>CustomInfo\CCRC32</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomInfo.cpp">
+      <Filter>CustomInfo\CustomInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="MemScript.cpp">
+      <Filter>CustomInfo\MemScript</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StdAfx.h">
+      <Filter>StdAfx</Filter>
+    </ClInclude>
+    <ClInclude Include="CCRC32.h">
+      <Filter>CustomInfo\CCRC32</Filter>
+    </ClInclude>
+    <ClInclude Include="MemScript.h">
+      <Filter>CustomInfo\MemScript</Filter>
+    </ClInclude>
+    <ClInclude Include="ThemidaSDK.h">
+      <Filter>CustomInfo\ThemidaSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CustomInfo.rc">
+      <Filter>Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="CustomInfo.ico">
+      <Filter>Resource</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

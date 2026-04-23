@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.4.11626.88 stable
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Customs", "Customs\Customs.vcxproj", "{31F5D791-D9B7-4B4D-A903-127322F1B101}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CustomInfo", "CustomInfo\CustomInfo.vcxproj", "{47B04CD5-6658-4922-9E75-F5B7E8C135E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31F5D791-D9B7-4B4D-A903-127322F1B101}.Debug|x86.ActiveCfg = Debug|Win32
+		{31F5D791-D9B7-4B4D-A903-127322F1B101}.Debug|x86.Build.0 = Debug|Win32
+		{31F5D791-D9B7-4B4D-A903-127322F1B101}.Release|x86.ActiveCfg = Release|Win32
+		{31F5D791-D9B7-4B4D-A903-127322F1B101}.Release|x86.Build.0 = Release|Win32
+		{47B04CD5-6658-4922-9E75-F5B7E8C135E0}.Debug|x86.ActiveCfg = Debug|Win32
+		{47B04CD5-6658-4922-9E75-F5B7E8C135E0}.Debug|x86.Build.0 = Debug|Win32
+		{47B04CD5-6658-4922-9E75-F5B7E8C135E0}.Release|x86.ActiveCfg = Release|Win32
+		{47B04CD5-6658-4922-9E75-F5B7E8C135E0}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8FB1EC8-7F87-4636-94A5-0EB6BF0B6DCC}
+	EndGlobalSection
+EndGlobal

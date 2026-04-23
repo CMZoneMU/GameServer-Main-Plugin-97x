@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="[FT] Customs">
+      <UniqueIdentifier>{a592c783-8c33-4f37-ad39-81b27ae6be4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Monster">
+      <UniqueIdentifier>{570a9210-1d4b-4ab5-a1e9-b109fe74f41d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Janela">
+      <UniqueIdentifier>{7ff43068-02e2-4535-b0bb-59d36f63d85c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Main">
+      <UniqueIdentifier>{ba8c8b1c-20d3-4308-b222-d887d16d0d99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Main\Packets">
+      <UniqueIdentifier>{c82704fa-c9ea-44d6-b3eb-12ac539dfd93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Standard">
+      <UniqueIdentifier>{67002fd9-859a-4a06-81d7-70413b481afc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Protocol">
+      <UniqueIdentifier>{3fd83484-d79f-47be-8a52-7936b3d22961}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Standard\Offsets">
+      <UniqueIdentifier>{fda661ff-b2ad-464d-8379-08760e0ec367}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Standard\Functions">
+      <UniqueIdentifier>{7c142784-b7cf-4187-81e3-181b57596cdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Standard\DllMain">
+      <UniqueIdentifier>{98e9a3f6-70f5-4d23-8ef8-4233c629cf8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Main\Principal">
+      <UniqueIdentifier>{da7a901b-4c23-4375-bf6d-1dadfcb72c39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Standard\StdAfx">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="[FT] Standard\Detours">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="[FT] Customs\Minimizer">
+      <UniqueIdentifier>{7adf1a6b-5522-4218-a23d-3eeea72381e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Visual">
+      <UniqueIdentifier>{8a9cf8d8-0d2a-4739-b85d-2779fe390854}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Texture">
+      <UniqueIdentifier>{f89a135c-ea0c-44c0-b8dc-a2e66346ec60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Description">
+      <UniqueIdentifier>{397b9d4c-0575-4d9c-9152-3489aafa6e71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Title">
+      <UniqueIdentifier>{429250f2-0c94-4832-85c7-bca91593cd74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Camera">
+      <UniqueIdentifier>{584b7f8a-547f-469b-a629-fb7b67a3506b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Resolution">
+      <UniqueIdentifier>{66ac40f3-1e22-4389-bed5-b5af330d1b35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Jewel">
+      <UniqueIdentifier>{4fa228b4-a9cd-4637-91e7-d2a302527201}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Effect">
+      <UniqueIdentifier>{a4253772-50cc-4c9e-889e-52a6a6a894ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Main\Math">
+      <UniqueIdentifier>{4334d54d-2d7a-4ab7-8a5b-63f08afb9419}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Main\Tokenizer">
+      <UniqueIdentifier>{e6179fde-7071-4735-ab32-30ac14f8ad9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Font">
+      <UniqueIdentifier>{a9d90c59-071f-4579-94da-bd709dcc2877}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\HPBar">
+      <UniqueIdentifier>{8edc404f-8538-4826-ac3f-78b6d11806b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Main\Optimize">
+      <UniqueIdentifier>{c8db9d26-d5c7-48ea-b55a-4e44848dd189}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Right">
+      <UniqueIdentifier>{d618b62d-d1d5-4963-9add-915c194ec9fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Patent">
+      <UniqueIdentifier>{6f75a9ba-1b52-4e59-bddb-a7bdca242258}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Guild">
+      <UniqueIdentifier>{c043e02e-6602-479a-9813-eef37d91ee2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Message">
+      <UniqueIdentifier>{717950c0-c00a-4f83-933b-71c666110edc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Main\Protect">
+      <UniqueIdentifier>{f2520cb8-3051-4ec2-895b-fe4add8a6f3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Interface">
+      <UniqueIdentifier>{8a2a80d8-0765-4dfb-8446-33e758dc7491}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Main\CCRC32">
+      <UniqueIdentifier>{2ed74a5d-e1fc-49b8-bb76-b70147d20fc8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Functions.cpp">
+      <Filter>[FT] Standard\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Janela.cpp">
+      <Filter>[FT] Customs\Janela</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>[FT] Customs\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol.cpp">
+      <Filter>[FT] Customs\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Principal.cpp">
+      <Filter>[FT] Main\Principal</Filter>
+    </ClCompile>
+    <ClCompile Include="DllMain.cpp">
+      <Filter>[FT] Standard\DllMain</Filter>
+    </ClCompile>
+    <ClCompile Include="Visual.cpp">
+      <Filter>[FT] Customs\Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>[FT] Customs\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Description.cpp">
+      <Filter>[FT] Customs\Description</Filter>
+    </ClCompile>
+    <ClCompile Include="Title.cpp">
+      <Filter>[FT] Customs\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>[FT] Customs\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Resolution.cpp">
+      <Filter>[FT] Customs\Resolution</Filter>
+    </ClCompile>
+    <ClCompile Include="Jewel.cpp">
+      <Filter>[FT] Customs\Jewel</Filter>
+    </ClCompile>
+    <ClCompile Include="Effect.cpp">
+      <Filter>[FT] Customs\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Math.cpp">
+      <Filter>[FT] Main\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>[FT] Customs\Font</Filter>
+    </ClCompile>
+    <ClCompile Include="HPBar.cpp">
+      <Filter>[FT] Customs\HPBar</Filter>
+    </ClCompile>
+    <ClCompile Include="Optimize.cpp">
+      <Filter>[FT] Main\Optimize</Filter>
+    </ClCompile>
+    <ClCompile Include="Right.cpp">
+      <Filter>[FT] Customs\Right</Filter>
+    </ClCompile>
+    <ClCompile Include="Patent.cpp">
+      <Filter>[FT] Customs\Patent</Filter>
+    </ClCompile>
+    <ClCompile Include="Guild.cpp">
+      <Filter>[FT] Customs\Guild</Filter>
+    </ClCompile>
+    <ClCompile Include="Message.cpp">
+      <Filter>[FT] Customs\Message</Filter>
+    </ClCompile>
+    <ClCompile Include="Protect.cpp">
+      <Filter>[FT] Main\Protect</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>[FT] Standard\StdAfx</Filter>
+    </ClCompile>
+    <ClCompile Include="CCRC32.cpp">
+      <Filter>[FT] Main\CCRC32</Filter>
+    </ClCompile>
+    <ClCompile Include="Interface.cpp">
+      <Filter>[FT] Customs\Interface</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="detours.h">
+      <Filter>[FT] Standard\Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="Functions.h">
+      <Filter>[FT] Standard\Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="Janela.h">
+      <Filter>[FT] Customs\Janela</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>[FT] Customs\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets.h">
+      <Filter>[FT] Standard\Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="NakedMonster.h">
+      <Filter>[FT] Customs\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Packets.h">
+      <Filter>[FT] Main\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol.h">
+      <Filter>[FT] Customs\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>[FT] Standard\StdAfx</Filter>
+    </ClInclude>
+    <ClInclude Include="Principal.h">
+      <Filter>[FT] Main\Principal</Filter>
+    </ClInclude>
+    <ClInclude Include="Visual.h">
+      <Filter>[FT] Customs\Visual</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>[FT] Customs\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Description.h">
+      <Filter>[FT] Customs\Description</Filter>
+    </ClInclude>
+    <ClInclude Include="Title.h">
+      <Filter>[FT] Customs\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>[FT] Customs\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Resolution.h">
+      <Filter>[FT] Customs\Resolution</Filter>
+    </ClInclude>
+    <ClInclude Include="Jewel.h">
+      <Filter>[FT] Customs\Jewel</Filter>
+    </ClInclude>
+    <ClInclude Include="Effect.h">
+      <Filter>[FT] Customs\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Math.h">
+      <Filter>[FT] Main\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Tokenizer.h">
+      <Filter>[FT] Main\Tokenizer</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>[FT] Customs\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="HPBar.h">
+      <Filter>[FT] Customs\HPBar</Filter>
+    </ClInclude>
+    <ClInclude Include="Optimize.h">
+      <Filter>[FT] Main\Optimize</Filter>
+    </ClInclude>
+    <ClInclude Include="Naked.h">
+      <Filter>[FT] Customs\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Right.h">
+      <Filter>[FT] Customs\Right</Filter>
+    </ClInclude>
+    <ClInclude Include="Patent.h">
+      <Filter>[FT] Customs\Patent</Filter>
+    </ClInclude>
+    <ClInclude Include="Guild.h">
+      <Filter>[FT] Customs\Guild</Filter>
+    </ClInclude>
+    <ClInclude Include="Message.h">
+      <Filter>[FT] Customs\Message</Filter>
+    </ClInclude>
+    <ClInclude Include="Protect.h">
+      <Filter>[FT] Main\Protect</Filter>
+    </ClInclude>
+    <ClInclude Include="CCRC32.h">
+      <Filter>[FT] Main\CCRC32</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface.h">
+      <Filter>[FT] Customs\Interface</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
