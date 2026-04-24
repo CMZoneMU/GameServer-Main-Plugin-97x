@@ -2,6 +2,7 @@
 
 static DWORD m_MonsterId = 0;
 static DWORD m_ModelId = 0;
+
 //							0		4		  8			12		  16		20		  24		28		  32		36
 static DWORD m_Jump[] = { 0x45E03D, 0x45E032, 0x504082, 0x504579, 0x45B7E9, 0x45DE6E, 0x45DE8A, 0x5045B9, 0x504071, 0x50456A };
 static DWORD m_Call[] = { 0x501080, 0x504040 };
@@ -9,6 +10,56 @@ static DWORD m_Directory1 = 0;
 static DWORD m_Directory2 = 0;
 static const char* m_Filename = nullptr;
 static ZMonsterAttribute* m_Attribute = nullptr;
+
+// [ Novo ]: Endereço para criar o monstro, onde será aplicada a escala personalizada
+static DWORD g_CreateCharacterContinue = 0x45AA96;
+
+// [ Novo ]: Hook para criar o monstro com a escala personalizada
+DWORD __cdecl CreateCharacter_Hook(int Key, int ModelType, int PositionX, int PositionY, int Rotation)
+{
+	DWORD Object = 0;
+
+	DWORD vKey = Key;
+	DWORD vType = ModelType;
+	DWORD vPosX = PositionX;
+	DWORD vPosY = PositionY;
+	DWORD vRot = Rotation;
+
+	__asm
+	{
+		MOV EAX, vRot
+		PUSH EAX
+
+		MOV EAX, vPosY
+		PUSH EAX
+
+		MOV EAX, vPosX
+		PUSH EAX
+
+		MOV EAX, vType
+		PUSH EAX
+
+		MOV EAX, vKey
+		PUSH EAX
+
+		MOV ECX, DWORD PTR DS : [0x8033C38]
+		CALL g_CreateCharacterContinue
+		ADD ESP, 20
+		MOV Object, EAX
+	}
+
+	if (Object != 0)
+	{
+		ZMonsterAttribute* lpAttr = Monster.GetAttribute(ModelType);
+
+		if (lpAttr != 0)
+		{
+			*(float*)(Object + 0x0C) = lpAttr->Scale;
+		}
+	}
+
+	return Object;
+}
 
 void __declspec(naked) SetMonster()
 {
@@ -75,12 +126,11 @@ void __declspec(naked) LoadBmd()
 		m_Directory1 = m_Attribute->Directory1;
 		m_Directory2 = m_Attribute->Directory2;
 
-		
 		__asm
 		{
 			POPAD;
 			XOR EDX, EDX;
-			PUSH -1;
+			PUSH - 1;
 			PUSH m_Filename;
 			PUSH m_Directory1;
 			PUSH ESI;
@@ -126,9 +176,9 @@ void __declspec(naked) LoadModel()
 			POPAD;
 			PUSH m_ModelId;
 			CALL m_Call[4];
-			MOV ECX, DWORD PTR SS : [ESP + 0x20];
-			MOV EDX, DWORD PTR SS : [ESP + 0x1C];
-			MOV EAX, DWORD PTR SS : [ESP + 0x24];
+			MOV ECX, DWORD PTR SS : [ESP + 0x20] ;
+			MOV EDX, DWORD PTR SS : [ESP + 0x1C] ;
+			MOV EAX, DWORD PTR SS : [ESP + 0x24] ;
 			PUSH 0;
 			PUSH ECX;
 			PUSH EDX;
@@ -151,16 +201,16 @@ void __declspec(naked) ReloadModel()
 		__asm
 		{
 			POPAD;
-			MOV WORD PTR DS : [EDI + 0x26], 0x0;
+			MOV WORD PTR DS : [EDI + 0x26] , 0x0;
 			JMP IsModel;
 		}
 	}
-	
+
 	__asm
 	{
 		POPAD;
 	IsModel:
-		CMP WORD PTR DS : [EDI + 0x26], 0x0;
+		CMP WORD PTR DS : [EDI + 0x26] , 0x0;
 		JG IsJG;
 		JMP m_Jump[32];
 
@@ -168,4 +218,3 @@ void __declspec(naked) ReloadModel()
 		JMP m_Jump[28];
 	}
 }
-

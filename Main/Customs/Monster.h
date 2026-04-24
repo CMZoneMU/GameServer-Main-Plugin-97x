@@ -10,6 +10,7 @@ struct ZMonsterAttribute
 	std::string Filename;
 	DWORD Directory1;
 	DWORD Directory2;
+	float Scale;
 };
 
 class ZMonster
@@ -20,14 +21,15 @@ public:
 
 public:
 	void Load();
-	void Insert(BYTE MonsterId, bool IsNPC, DWORD ModelId, std::string Filename, DWORD Directory1, DWORD Directory2);
+	void Insert(BYTE MonsterId, bool IsNPC, DWORD ModelId, std::string Filename, DWORD Directory1, DWORD Directory2, float Scale = 1.0f);
 	bool Exist(BYTE MonsterId);
 	bool IsNPC(BYTE MonsterId);
 	DWORD GetModel(BYTE MonsterId);
+	float GetScale(BYTE MonsterId); // [ Novo ]: Escala para monstros
 	ZMonsterAttribute* GetAttribute(DWORD ModelId);
 
 private:
 	std::map<BYTE, ZMonsterAttribute> Monster;
-}; 
+};
 
 extern ZMonster Monster;
