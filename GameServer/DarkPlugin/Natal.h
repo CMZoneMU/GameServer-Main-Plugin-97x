@@ -7,6 +7,10 @@ struct sNatal
 	int					_Minutes;
 	int					_Monster;
 	int					_Duration;
+	int                 _Map;
+	int                 _X;
+	int                 _Y;
+	int                 _QNTD[2];
 	BYTE				_Type;
 	BYTE				_Index;
 	BYTE				_Level;

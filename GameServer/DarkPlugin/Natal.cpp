@@ -21,7 +21,9 @@ bool cNatal::Load()
 
 	if (Group.GetSection(0, Section))
 	{
-		this->_Active = Section.Rows[0].GetInt(0) > 0 ? true : false;
+		this->_Active = Section.Rows[0].GetInt(0) > 0 ? true : false; 
+		this->_Class[0] = Section.Rows[0].GetInt(1); 
+		this->_Class[1] = Section.Rows[0].GetInt(2);
 	}
 
 	if (Group.GetSection(1, Section))
@@ -133,7 +135,7 @@ void cNatal::Run()
 				{
 					while (Func.GetBoxPosition(this->_Mapa, 10, 10, 240, 240, this->_X, this->_Y) == 0) {}
 
-					Func.MonsterAdd(170, this->_Mapa, this->_X, this->_Y);
+					Func.MonsterAdd(this->_Class[0], this->_Mapa, this->_X, this->_Y);
 
 					this->_Total[0]++;
 				}
@@ -144,7 +146,7 @@ void cNatal::Run()
 				{
 					while (Func.GetBoxPosition(this->_Mapa, 10, 10, 240, 240, this->_X, this->_Y) == 0) {}
 
-					Func.MonsterAdd(171, this->_Mapa, this->_X, this->_Y);
+					Func.MonsterAdd(this->_Class[1], this->_Mapa, this->_X, this->_Y);
 
 					this->_Total[1]++;
 				}
@@ -176,7 +178,7 @@ void cNatal::Disappear()
 
 		for (int i = 0; i < MAXMONSTER; i++)
 		{
-			if (gObj[i].Class == 170 || gObj[i].Class == 171)
+			if (gObj[i].Class == this->_Class[0] || gObj[i].Class == this->_Class[1])
 			{
 				gObj[i].Live = FALSE;
 

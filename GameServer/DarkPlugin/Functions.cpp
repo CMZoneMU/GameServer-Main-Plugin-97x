@@ -471,20 +471,18 @@ void Functions::gObjLifeCheckEx(LPOBJ lpTargetObj, LPOBJ lpObj, int AttackDamage
 	{
 		if (lpTargetObj->Life <= 0 && lpTargetObj->Live != 0)
 		{
-			if (lpTargetObj->Type == MONSTER && lpTargetObj->Class > 0 && lpTargetObj->Class == 170)
+			if (lpTargetObj->Type == MONSTER && lpTargetObj->Class > 0 && lpTargetObj->Class == Natal._Class[0])
 			{
-				Natal._Class[0] = lpTargetObj->Class = 170;
-
+				// fix erro: ID dinamico
 				Natal.Santa(lpObj->m_Index);
 
 				lpTargetObj->Live = false;
 
 				gObjDel(lpTargetObj->m_Index);
 			}
-			else if (lpTargetObj->Type == MONSTER && lpTargetObj->Class > 0 && lpTargetObj->Class == 171)
+			else if (lpTargetObj->Type == MONSTER && lpTargetObj->Class > 0 && lpTargetObj->Class == Natal._Class[1])
 			{
-				Natal._Class[1] = lpTargetObj->Class = 171;
-
+				// fix erro: ID dinamico
 				Natal.Globin(lpObj->m_Index);
 
 				lpTargetObj->Live = false;
@@ -498,20 +496,18 @@ void Functions::gObjLifeCheckEx(LPOBJ lpTargetObj, LPOBJ lpObj, int AttackDamage
 	{
 		if (lpTargetObj->Life <= 0 && lpTargetObj->Live != 0)
 		{
-			if (lpTargetObj->Type == MONSTER && lpTargetObj->Class > 0 && lpTargetObj->Class == 176)
+			if (lpTargetObj->Type == MONSTER && lpTargetObj->Class > 0 && lpTargetObj->Class == Pascoa._Class[0])
 			{
-				Pascoa._Class[0] = lpTargetObj->Class = 176;
-
+				// fix erro: ID agora e dinamico
 				Pascoa.Assasin(lpObj->m_Index);
 
 				lpTargetObj->Live = false;
 
 				gObjDel(lpTargetObj->m_Index);
 			}
-			else if (lpTargetObj->Type == MONSTER && lpTargetObj->Class > 0 && lpTargetObj->Class == 177)
+			else if (lpTargetObj->Type == MONSTER && lpTargetObj->Class > 0 && lpTargetObj->Class == Pascoa._Class[1])
 			{
-				Pascoa._Class[1] = lpTargetObj->Class = 177;
-
+				// fix erro: ID agora e dinamico
 				Pascoa.Rabbit(lpObj->m_Index);
 
 				lpTargetObj->Live = false;

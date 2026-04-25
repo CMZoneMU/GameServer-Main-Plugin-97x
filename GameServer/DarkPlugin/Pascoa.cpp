@@ -21,7 +21,7 @@ bool cPascoa::Load()
 
 	if (Group.GetSection(0, Section))
 	{
-		this->_Active = Section.Rows[0].GetInt(0) > 0 ? true : false;
+		this->_Active = Section.Rows[0].GetInt(0) > 0 ? true : false; this->_Class[0] = Section.Rows[0].GetInt(1); this->_Class[1] = Section.Rows[0].GetInt(2);
 	}
 
 	if (Group.GetSection(1, Section))
@@ -32,6 +32,11 @@ bool cPascoa::Load()
 			this->PascoaStruct[this->_Count[0]]._Hours = Section.Rows[i].GetInt(1);
 			this->PascoaStruct[this->_Count[0]]._Minutes = Section.Rows[i].GetInt(2);
 			this->PascoaStruct[this->_Count[0]]._Duration = Section.Rows[i].GetInt(3) * 60 * 1000;
+			this->PascoaStruct[this->_Count[0]]._Map = Section.Rows[i].GetInt(4); 
+			this->PascoaStruct[this->_Count[0]]._X = Section.Rows[i].GetInt(5); 
+			this->PascoaStruct[this->_Count[0]]._Y = Section.Rows[i].GetInt(6); 
+			this->PascoaStruct[this->_Count[0]]._QNTD[0] = Section.Rows[i].GetInt(7); 
+			this->PascoaStruct[this->_Count[0]]._QNTD[1] = Section.Rows[i].GetInt(8);
 			this->_Count[0]++;
 		}
 	}
@@ -133,7 +138,7 @@ void cPascoa::Run()
 				{
 					while (Func.GetBoxPosition(this->_Mapa, 10, 10, 240, 240, this->_X, this->_Y) == 0) {}
 
-					Func.MonsterAdd(176, this->_Mapa, this->_X, this->_Y);
+					Func.MonsterAdd(this->_Class[0], this->_Mapa, this->_X, this->_Y);
 
 					this->_Total[0]++;
 				}
@@ -144,7 +149,7 @@ void cPascoa::Run()
 				{
 					while (Func.GetBoxPosition(this->_Mapa, 10, 10, 240, 240, this->_X, this->_Y) == 0) {}
 
-					Func.MonsterAdd(177, this->_Mapa, this->_X, this->_Y);
+					Func.MonsterAdd(this->_Class[1], this->_Mapa, this->_X, this->_Y);
 
 					this->_Total[1]++;
 				}
@@ -176,7 +181,7 @@ void cPascoa::Disappear()
 
 		for (int i = 0; i < MAXMONSTER; i++)
 		{
-			if (gObj[i].Class == 176 || gObj[i].Class == 177)
+			if (gObj[i].Class == this->_Class[0] || gObj[i].Class == this->_Class[1])
 			{
 				gObj[i].Live = FALSE;
 
