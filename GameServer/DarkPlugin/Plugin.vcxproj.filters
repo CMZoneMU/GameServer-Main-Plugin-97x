@@ -1,0 +1,792 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="[FT] Customs">
+      <UniqueIdentifier>{7edc0d0b-2a93-4f30-a2d4-721570e834c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Protocol">
+      <UniqueIdentifier>{17bbf315-4575-4a1d-80e8-1a2224eb17bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Standard">
+      <UniqueIdentifier>{4c3eadbc-230d-4d9c-923a-0fd6f509c35f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Standard\Biblioteca">
+      <UniqueIdentifier>{af7e5c61-8885-45af-b1c6-0c0f403264e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Standard\Offsets">
+      <UniqueIdentifier>{a48f0a77-2cbd-4df6-9e4b-05b17fe99b6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] GameServer">
+      <UniqueIdentifier>{e7b43aaf-c851-47a6-9acb-040312257fa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] GameServer\Packets">
+      <UniqueIdentifier>{4a4dfab6-3ce6-4704-8357-2fd1d4c6c43e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] GameServer\Tokenizer">
+      <UniqueIdentifier>{5ab9afe8-8147-4c07-aa2e-71470dd6b992}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Standard\Functions">
+      <UniqueIdentifier>{95ac77b2-5cdf-4c8c-8fdc-dba2185ac664}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Standard\StdAfx">
+      <UniqueIdentifier>{871c0c44-20ea-4940-9e73-8cac9cd6becc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Standard\DllMain">
+      <UniqueIdentifier>{7c5d077d-2ddb-4df9-a129-f66aadb5da3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Standard\License">
+      <UniqueIdentifier>{1f8ab27c-862a-4825-b426-2bcd48014c89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] GameServer\Mapas">
+      <UniqueIdentifier>{72d715c4-be1f-49aa-b5ea-a9b6709f1fde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Dropping">
+      <UniqueIdentifier>{dd139e9e-6d69-47d8-b772-44c27a7fb1c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Command">
+      <UniqueIdentifier>{72663da5-2b9c-45b2-b1a9-0145ee32aa59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Command\Main">
+      <UniqueIdentifier>{e806aaf0-0fcc-43f7-b72e-f33f1ca40f96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events">
+      <UniqueIdentifier>{29a2302f-b5b3-4c70-91a6-b95e0ef7f2c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events\DuelEvent">
+      <UniqueIdentifier>{00324cd8-8297-4619-975c-6fd856b9678c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events\PegaEvent">
+      <UniqueIdentifier>{70fe51ab-2551-4fac-bb47-bdcabf4d5967}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events\SobreEvent">
+      <UniqueIdentifier>{d40f4fe8-7b2c-435c-b15b-9f536dc5c3d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events\BossEvent">
+      <UniqueIdentifier>{d5229810-3f1b-4328-87b2-8740c2232d0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events\BloodEvent">
+      <UniqueIdentifier>{9e890f9a-87d3-455f-b234-eeaf1c19a088}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Shopping">
+      <UniqueIdentifier>{7950c0eb-650a-4e39-8fc4-071c665cfe4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Message">
+      <UniqueIdentifier>{e3d75f15-aabd-40dc-9155-9d5954f40561}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events\QuizEvent">
+      <UniqueIdentifier>{94d95a9c-11f0-4a2b-a5bb-c264a1608b78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events\DeathEvent">
+      <UniqueIdentifier>{712fe882-32d5-4cfa-8810-d6709870864e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events\HappyEvent">
+      <UniqueIdentifier>{a2c75768-75f2-4b7d-ab68-c08d3819ae33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System">
+      <UniqueIdentifier>{e28f998f-88a1-4804-a8f5-d124424176b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Balancer">
+      <UniqueIdentifier>{cad7564e-f398-480e-80fc-1f4fa407cdea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Routine">
+      <UniqueIdentifier>{e24a06bb-1174-412a-854b-9e369d1fc386}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Routine\News">
+      <UniqueIdentifier>{59383ccc-4683-49fb-805e-3629c198d012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Display">
+      <UniqueIdentifier>{07d9ab66-680b-49f0-9a8a-4e5abb8797ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Teleport">
+      <UniqueIdentifier>{29ea9764-ed40-4132-891e-a15ac6c7ad57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events\CoinEvent">
+      <UniqueIdentifier>{9b9e0602-fb2e-4241-9880-92b31ea209de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events\RaffleEvent">
+      <UniqueIdentifier>{2633bedd-be09-405e-a38f-44f7eefaee25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Bank">
+      <UniqueIdentifier>{c5d91b75-256f-459b-a799-b18adc639f4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Attack">
+      <UniqueIdentifier>{31c33cc7-f4eb-4938-bca5-3aa50495584c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Standard\Magic">
+      <UniqueIdentifier>{2bad24f6-f9cc-48b7-826c-38cdb6092c28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] GameServer\Optimize">
+      <UniqueIdentifier>{7d96c090-30a6-43a5-a1e8-6c0a2e33ab7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Bonus">
+      <UniqueIdentifier>{a9cfc0b1-704c-4850-a647-6e6f0b6cc657}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events\TheftEvent">
+      <UniqueIdentifier>{f9235919-5681-441c-a4a7-b3f175045439}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Collector">
+      <UniqueIdentifier>{77f10a85-bc2b-4429-b67e-9eaad1b16615}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events\TreasureEvent">
+      <UniqueIdentifier>{01026b57-01e5-469a-92f8-99305a4389c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] GameServer\Corrections">
+      <UniqueIdentifier>{8eb81e16-2903-4035-9551-8726ede3f8c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Authority">
+      <UniqueIdentifier>{9eafea49-f2ad-4449-9f6a-0265e17fb8d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Protect">
+      <UniqueIdentifier>{d447cab2-ab4d-4065-9c44-fffe49939077}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Protect\Flood">
+      <UniqueIdentifier>{950325b1-3711-4599-ad59-9b26fbf79a8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Protect\Speed">
+      <UniqueIdentifier>{a9429132-2bc4-4748-ae93-a5a1fcd19737}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Protect\Disconnect">
+      <UniqueIdentifier>{413bea93-97f9-442f-96a9-296b53a4fdc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Protect\Unicode">
+      <UniqueIdentifier>{84de6c56-6a4a-4261-9b53-04efd873f156}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Protect\Dupe">
+      <UniqueIdentifier>{4bd13aa3-2924-49bc-8cfa-be361c1efde3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Protect\Ware">
+      <UniqueIdentifier>{af531ec2-8bb8-4f1d-ac7a-1104d4eea1ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Duel">
+      <UniqueIdentifier>{91068717-e85e-481b-a171-1031e40a33ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Roleta">
+      <UniqueIdentifier>{efd5b2a5-c6a4-4f66-b581-5b2a9135df8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Potion">
+      <UniqueIdentifier>{719d7f7b-95b0-43cf-959e-bddeb8a10abe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Quest">
+      <UniqueIdentifier>{6768a7ec-94b4-4b5d-9eec-220048d0108d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events\FlagEvent">
+      <UniqueIdentifier>{ed4d1411-6c80-46ec-adbe-65fb9e502248}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Rank">
+      <UniqueIdentifier>{7c787747-ce18-407b-be5a-648bbbfcb6f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Ring">
+      <UniqueIdentifier>{25ce157c-71a2-4a2a-8d01-aec345aef562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events\PairEvent">
+      <UniqueIdentifier>{40ae34a7-fe63-452c-8e8e-a5ba2036739f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events\RoletaEvent">
+      <UniqueIdentifier>{48ccd067-252d-4d6d-8d5e-d123a12d6dec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Offline">
+      <UniqueIdentifier>{391512e3-af57-464e-add1-1cc5a0449ab9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Party">
+      <UniqueIdentifier>{d67dff02-d823-4e92-93ab-3df657cd8394}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events\DropEvent">
+      <UniqueIdentifier>{3d4125d1-a337-4100-8af6-88ae6c09614f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events\UfcEvent">
+      <UniqueIdentifier>{3e0080e3-d05c-44e1-ad93-775308a85552}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events\BattleEvent">
+      <UniqueIdentifier>{50ad15e5-d949-4185-afc9-2c13ae3e7cab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Invasion">
+      <UniqueIdentifier>{72bbf5d6-d832-43da-a66e-212d2b1ad866}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Reward">
+      <UniqueIdentifier>{a0c73567-4924-4945-a220-29b23c3f3bdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Patent">
+      <UniqueIdentifier>{8260f925-bdb7-46e5-b161-31643fa503e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Attribute">
+      <UniqueIdentifier>{a4be182d-f98f-4d54-8a42-a774a1312710}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events\DevilEvent">
+      <UniqueIdentifier>{83b384a4-6f6b-498f-883a-02e0c1887315}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Block">
+      <UniqueIdentifier>{67da7ced-fb09-49a1-b644-fa6ef1b26f20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Events\KingEvent">
+      <UniqueIdentifier>{fa48524f-9b76-42a5-81c8-62c7ffdf68b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Pack">
+      <UniqueIdentifier>{d1be895f-7932-48dc-8a8c-288da1fcc654}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Invasion\Natal">
+      <UniqueIdentifier>{192d5092-a60c-4d90-8dd6-ce78ed6582dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\System\Invasion\Pascoa">
+      <UniqueIdentifier>{77a95807-12ce-4542-bbf6-b459679ef073}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[CMZ] Customs">
+      <UniqueIdentifier>{74c21d68-a7ea-4ed2-af43-0d306aa0d2f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[CMZ] Customs\Reset">
+      <UniqueIdentifier>{6609e07f-6d39-41c3-be5b-52b8e221683f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[CMZ] Customs\MSSQL">
+      <UniqueIdentifier>{2d3a43ff-1aa6-49f5-bf74-27079371cdd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[CMZ] Customs\MSSQL\Manager">
+      <UniqueIdentifier>{9e25fefa-b332-4e46-b099-026942226657}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[CMZ] Customs\MSSQL\Database">
+      <UniqueIdentifier>{8391b954-2157-4240-b29d-025c95d47cfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[CMZ] Customs\MSSQL\Querys">
+      <UniqueIdentifier>{3736a264-55c0-4be6-874c-bed5c6b2e28b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[CMZ] Customs\MSSQL\Logs">
+      <UniqueIdentifier>{a1d184ff-e556-4fff-ae8f-aa91c9ff0779}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[CMZ] Customs\Auto">
+      <UniqueIdentifier>{64a696f4-8e38-4218-9c15-9cf527be45c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[CMZ] Customs\Master">
+      <UniqueIdentifier>{6ae89c42-4122-4260-afbf-0f896be628d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[CMZ] Customs\Connect">
+      <UniqueIdentifier>{91a4dc97-c435-4f0e-bb5e-d8d7e12c1e1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[CMZ] Customs\Setting">
+      <UniqueIdentifier>{bc237a07-0fbb-4b6a-816e-93f4ada20d3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[FT] Customs\Buy">
+      <UniqueIdentifier>{61b4859b-b5e9-470d-913b-9b5cf7d7bea4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[CMZ] Customs\Box%27s">
+      <UniqueIdentifier>{e5af0368-ce85-4a66-bece-017fe66280a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[CMZ] Customs\Box%27s\01 - Box Of Wings">
+      <UniqueIdentifier>{058a699d-f7b9-4fd3-876a-2cd6a8356ef7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[CMZ] Customs\Box%27s\02 - Box Of Exclusive">
+      <UniqueIdentifier>{33a518e7-8676-47c2-8e8a-a5fa8a19b1df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[CMZ] Customs\Box%27s\03 - Box Of Weapons">
+      <UniqueIdentifier>{0db7b11c-38ff-4bae-9318-819d0502934d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[CMZ] Customs\Box%27s\04 - Box Of Limited">
+      <UniqueIdentifier>{d219e580-6845-4100-aee4-963a29c03bdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[CMZ] Customs\Box%27s\05 - Box Of Sets">
+      <UniqueIdentifier>{a3ae0ee4-871c-4312-a928-42363f9bf985}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[CMZ] Customs\Pet">
+      <UniqueIdentifier>{1d92f5d4-636b-4708-976b-d41e5ab5f5d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="[CMZ] Customs\Experience">
+      <UniqueIdentifier>{60cb6b3f-12c7-46db-94ba-90374f639c76}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Protocol.h">
+      <Filter>[FT] Customs\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Biblioteca.h">
+      <Filter>[FT] Standard\Biblioteca</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets.h">
+      <Filter>[FT] Standard\Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Connect.h">
+      <Filter>[CMZ] Customs\Connect</Filter>
+    </ClInclude>
+    <ClInclude Include="Shop.h">
+      <Filter>[FT] Customs\Shopping</Filter>
+    </ClInclude>
+    <ClInclude Include="Reset.h">
+      <Filter>[CMZ] Customs\Reset</Filter>
+    </ClInclude>
+    <ClInclude Include="Packets.h">
+      <Filter>[FT] GameServer\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="Tokenizer.h">
+      <Filter>[FT] GameServer\Tokenizer</Filter>
+    </ClInclude>
+    <ClInclude Include="Flood.h">
+      <Filter>[FT] Customs\System\Protect\Flood</Filter>
+    </ClInclude>
+    <ClInclude Include="Functions.h">
+      <Filter>[FT] Standard\Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>[FT] Standard\StdAfx</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager.h">
+      <Filter>[CMZ] Customs\MSSQL\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Database.h">
+      <Filter>[CMZ] Customs\MSSQL\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Treasure.h">
+      <Filter>[FT] Customs\Events\TreasureEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="Balancer.h">
+      <Filter>[FT] Customs\System\Balancer</Filter>
+    </ClInclude>
+    <ClInclude Include="DuelEvent.h">
+      <Filter>[FT] Customs\Events\DuelEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="PegaEvent.h">
+      <Filter>[FT] Customs\Events\PegaEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="News.h">
+      <Filter>[FT] Customs\System\Routine\News</Filter>
+    </ClInclude>
+    <ClInclude Include="SobreEvent.h">
+      <Filter>[FT] Customs\Events\SobreEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="Display.h">
+      <Filter>[FT] Customs\System\Display</Filter>
+    </ClInclude>
+    <ClInclude Include="Querys.h">
+      <Filter>[CMZ] Customs\MSSQL\Querys</Filter>
+    </ClInclude>
+    <ClInclude Include="Master.h">
+      <Filter>[CMZ] Customs\Master</Filter>
+    </ClInclude>
+    <ClInclude Include="Speed.h">
+      <Filter>[FT] Customs\System\Protect\Speed</Filter>
+    </ClInclude>
+    <ClInclude Include="Teleport.h">
+      <Filter>[FT] Customs\System\Teleport</Filter>
+    </ClInclude>
+    <ClInclude Include="BossEvent.h">
+      <Filter>[FT] Customs\Events\BossEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="License.h">
+      <Filter>[FT] Standard\License</Filter>
+    </ClInclude>
+    <ClInclude Include="Mapas.h">
+      <Filter>[FT] GameServer\Mapas</Filter>
+    </ClInclude>
+    <ClInclude Include="Dropping.h">
+      <Filter>[FT] Customs\Dropping</Filter>
+    </ClInclude>
+    <ClInclude Include="BloodEvent.h">
+      <Filter>[FT] Customs\Events\BloodEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="Setting.h">
+      <Filter>[CMZ] Customs\Setting</Filter>
+    </ClInclude>
+    <ClInclude Include="Message.h">
+      <Filter>[FT] Customs\Message</Filter>
+    </ClInclude>
+    <ClInclude Include="QuizEvent.h">
+      <Filter>[FT] Customs\Events\QuizEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>[FT] Customs\Command\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="DeathEvent.h">
+      <Filter>[FT] Customs\Events\DeathEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="Disconnect.h">
+      <Filter>[FT] Customs\System\Protect\Disconnect</Filter>
+    </ClInclude>
+    <ClInclude Include="HappyEvent.h">
+      <Filter>[FT] Customs\Events\HappyEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="Unicode.h">
+      <Filter>[FT] Customs\System\Protect\Unicode</Filter>
+    </ClInclude>
+    <ClInclude Include="Wings.h">
+      <Filter>[CMZ] Customs\Box%27s\01 - Box Of Wings</Filter>
+    </ClInclude>
+    <ClInclude Include="Exclusive.h">
+      <Filter>[CMZ] Customs\Box%27s\02 - Box Of Exclusive</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapons.h">
+      <Filter>[CMZ] Customs\Box%27s\03 - Box Of Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="Limited.h">
+      <Filter>[CMZ] Customs\Box%27s\04 - Box Of Limited</Filter>
+    </ClInclude>
+    <ClInclude Include="Sets.h">
+      <Filter>[CMZ] Customs\Box%27s\05 - Box Of Sets</Filter>
+    </ClInclude>
+    <ClInclude Include="Logs.h">
+      <Filter>[CMZ] Customs\MSSQL\Logs</Filter>
+    </ClInclude>
+    <ClInclude Include="CoinEvent.h">
+      <Filter>[FT] Customs\Events\CoinEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="RaffleEvent.h">
+      <Filter>[FT] Customs\Events\RaffleEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="Dupe.h">
+      <Filter>[FT] Customs\System\Protect\Dupe</Filter>
+    </ClInclude>
+    <ClInclude Include="Bank.h">
+      <Filter>[FT] Customs\System\Bank</Filter>
+    </ClInclude>
+    <ClInclude Include="Attack.h">
+      <Filter>[FT] Customs\System\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="Magic.h">
+      <Filter>[FT] Standard\Magic</Filter>
+    </ClInclude>
+    <ClInclude Include="Bonus.h">
+      <Filter>[FT] Customs\System\Bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="Optimize.h">
+      <Filter>[FT] GameServer\Optimize</Filter>
+    </ClInclude>
+    <ClInclude Include="TheftEvent.h">
+      <Filter>[FT] Customs\Events\TheftEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="Duel.h">
+      <Filter>[FT] Customs\System\Duel</Filter>
+    </ClInclude>
+    <ClInclude Include="Collector.h">
+      <Filter>[FT] Customs\System\Collector</Filter>
+    </ClInclude>
+    <ClInclude Include="Ware.h">
+      <Filter>[FT] Customs\System\Protect\Ware</Filter>
+    </ClInclude>
+    <ClInclude Include="Corrections.h">
+      <Filter>[FT] GameServer\Corrections</Filter>
+    </ClInclude>
+    <ClInclude Include="Authority.h">
+      <Filter>[FT] Customs\System\Authority</Filter>
+    </ClInclude>
+    <ClInclude Include="Roleta.h">
+      <Filter>[FT] Customs\System\Roleta</Filter>
+    </ClInclude>
+    <ClInclude Include="Potion.h">
+      <Filter>[FT] Customs\System\Potion</Filter>
+    </ClInclude>
+    <ClInclude Include="Quest.h">
+      <Filter>[FT] Customs\System\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="FlagEvent.h">
+      <Filter>[FT] Customs\Events\FlagEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="Rank.h">
+      <Filter>[FT] Customs\System\Rank</Filter>
+    </ClInclude>
+    <ClInclude Include="Ring.h">
+      <Filter>[FT] Customs\System\Ring</Filter>
+    </ClInclude>
+    <ClInclude Include="PairEvent.h">
+      <Filter>[FT] Customs\Events\PairEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="RoletaEvent.h">
+      <Filter>[FT] Customs\Events\RoletaEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="Auto.h">
+      <Filter>[CMZ] Customs\Auto</Filter>
+    </ClInclude>
+    <ClInclude Include="Offline.h">
+      <Filter>[FT] Customs\System\Offline</Filter>
+    </ClInclude>
+    <ClInclude Include="Party.h">
+      <Filter>[FT] Customs\System\Party</Filter>
+    </ClInclude>
+    <ClInclude Include="DropEvent.h">
+      <Filter>[FT] Customs\Events\DropEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="Experience.h">
+      <Filter>[CMZ] Customs\Experience</Filter>
+    </ClInclude>
+    <ClInclude Include="UfcEvent.h">
+      <Filter>[FT] Customs\Events\UfcEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleEvent.h">
+      <Filter>[FT] Customs\Events\BattleEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="Reward.h">
+      <Filter>[FT] Customs\System\Reward</Filter>
+    </ClInclude>
+    <ClInclude Include="Buy.h">
+      <Filter>[FT] Customs\Buy</Filter>
+    </ClInclude>
+    <ClInclude Include="Pet.h">
+      <Filter>[CMZ] Customs\Pet</Filter>
+    </ClInclude>
+    <ClInclude Include="Patent.h">
+      <Filter>[FT] Customs\System\Patent</Filter>
+    </ClInclude>
+    <ClInclude Include="Attribute.h">
+      <Filter>[FT] Customs\System\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="DevilEvent.h">
+      <Filter>[FT] Customs\Events\DevilEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="Block.h">
+      <Filter>[FT] Customs\System\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="KingEvent.h">
+      <Filter>[FT] Customs\Events\KingEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="Pack.h">
+      <Filter>[FT] Customs\System\Pack</Filter>
+    </ClInclude>
+    <ClInclude Include="Natal.h">
+      <Filter>[FT] Customs\System\Invasion\Natal</Filter>
+    </ClInclude>
+    <ClInclude Include="Pascoa.h">
+      <Filter>[FT] Customs\System\Invasion\Pascoa</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Protocol.cpp">
+      <Filter>[FT] Customs\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Biblioteca.cpp">
+      <Filter>[FT] Standard\Biblioteca</Filter>
+    </ClCompile>
+    <ClCompile Include="Connect.cpp">
+      <Filter>[CMZ] Customs\Connect</Filter>
+    </ClCompile>
+    <ClCompile Include="Shop.cpp">
+      <Filter>[FT] Customs\Shopping</Filter>
+    </ClCompile>
+    <ClCompile Include="Reset.cpp">
+      <Filter>[CMZ] Customs\Reset</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets.cpp">
+      <Filter>[FT] GameServer\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Flood.cpp">
+      <Filter>[FT] Customs\System\Protect\Flood</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions.cpp">
+      <Filter>[FT] Standard\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>[FT] Standard\StdAfx</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager.cpp">
+      <Filter>[CMZ] Customs\MSSQL\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Database.cpp">
+      <Filter>[CMZ] Customs\MSSQL\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Treasure.cpp">
+      <Filter>[FT] Customs\Events\TreasureEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="Balancer.cpp">
+      <Filter>[FT] Customs\System\Balancer</Filter>
+    </ClCompile>
+    <ClCompile Include="DuelEvent.cpp">
+      <Filter>[FT] Customs\Events\DuelEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="PegaEvent.cpp">
+      <Filter>[FT] Customs\Events\PegaEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="News.cpp">
+      <Filter>[FT] Customs\System\Routine\News</Filter>
+    </ClCompile>
+    <ClCompile Include="SobreEvent.cpp">
+      <Filter>[FT] Customs\Events\SobreEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="Display.cpp">
+      <Filter>[FT] Customs\System\Display</Filter>
+    </ClCompile>
+    <ClCompile Include="DllMain.cpp">
+      <Filter>[FT] Standard\DllMain</Filter>
+    </ClCompile>
+    <ClCompile Include="Querys.cpp">
+      <Filter>[CMZ] Customs\MSSQL\Querys</Filter>
+    </ClCompile>
+    <ClCompile Include="Master.cpp">
+      <Filter>[CMZ] Customs\Master</Filter>
+    </ClCompile>
+    <ClCompile Include="Speed.cpp">
+      <Filter>[FT] Customs\System\Protect\Speed</Filter>
+    </ClCompile>
+    <ClCompile Include="Teleport.cpp">
+      <Filter>[FT] Customs\System\Teleport</Filter>
+    </ClCompile>
+    <ClCompile Include="BossEvent.cpp">
+      <Filter>[FT] Customs\Events\BossEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="License.cpp">
+      <Filter>[FT] Standard\License</Filter>
+    </ClCompile>
+    <ClCompile Include="Mapas.cpp">
+      <Filter>[FT] GameServer\Mapas</Filter>
+    </ClCompile>
+    <ClCompile Include="Dropping.cpp">
+      <Filter>[FT] Customs\Dropping</Filter>
+    </ClCompile>
+    <ClCompile Include="BloodEvent.cpp">
+      <Filter>[FT] Customs\Events\BloodEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="Setting.cpp">
+      <Filter>[CMZ] Customs\Setting</Filter>
+    </ClCompile>
+    <ClCompile Include="Message.cpp">
+      <Filter>[FT] Customs\Message</Filter>
+    </ClCompile>
+    <ClCompile Include="QuizEvent.cpp">
+      <Filter>[FT] Customs\Events\QuizEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="Command.cpp">
+      <Filter>[FT] Customs\Command\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="DeathEvent.cpp">
+      <Filter>[FT] Customs\Events\DeathEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="Disconnect.cpp">
+      <Filter>[FT] Customs\System\Protect\Disconnect</Filter>
+    </ClCompile>
+    <ClCompile Include="HappyEvent.cpp">
+      <Filter>[FT] Customs\Events\HappyEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="Unicode.cpp">
+      <Filter>[FT] Customs\System\Protect\Unicode</Filter>
+    </ClCompile>
+    <ClCompile Include="Wings.cpp">
+      <Filter>[CMZ] Customs\Box%27s\01 - Box Of Wings</Filter>
+    </ClCompile>
+    <ClCompile Include="Exclusive.cpp">
+      <Filter>[CMZ] Customs\Box%27s\02 - Box Of Exclusive</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapons.cpp">
+      <Filter>[CMZ] Customs\Box%27s\03 - Box Of Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="Limited.cpp">
+      <Filter>[CMZ] Customs\Box%27s\04 - Box Of Limited</Filter>
+    </ClCompile>
+    <ClCompile Include="Sets.cpp">
+      <Filter>[CMZ] Customs\Box%27s\05 - Box Of Sets</Filter>
+    </ClCompile>
+    <ClCompile Include="Logs.cpp">
+      <Filter>[CMZ] Customs\MSSQL\Logs</Filter>
+    </ClCompile>
+    <ClCompile Include="CoinEvent.cpp">
+      <Filter>[FT] Customs\Events\CoinEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="RaffleEvent.cpp">
+      <Filter>[FT] Customs\Events\RaffleEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="Dupe.cpp">
+      <Filter>[FT] Customs\System\Protect\Dupe</Filter>
+    </ClCompile>
+    <ClCompile Include="Bank.cpp">
+      <Filter>[FT] Customs\System\Bank</Filter>
+    </ClCompile>
+    <ClCompile Include="Attack.cpp">
+      <Filter>[FT] Customs\System\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="Magic.cpp">
+      <Filter>[FT] Standard\Magic</Filter>
+    </ClCompile>
+    <ClCompile Include="Bonus.cpp">
+      <Filter>[FT] Customs\System\Bonus</Filter>
+    </ClCompile>
+    <ClCompile Include="Optimize.cpp">
+      <Filter>[FT] GameServer\Optimize</Filter>
+    </ClCompile>
+    <ClCompile Include="TheftEvent.cpp">
+      <Filter>[FT] Customs\Events\TheftEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="Duel.cpp">
+      <Filter>[FT] Customs\System\Duel</Filter>
+    </ClCompile>
+    <ClCompile Include="Collector.cpp">
+      <Filter>[FT] Customs\System\Collector</Filter>
+    </ClCompile>
+    <ClCompile Include="Ware.cpp">
+      <Filter>[FT] Customs\System\Protect\Ware</Filter>
+    </ClCompile>
+    <ClCompile Include="Corrections.cpp">
+      <Filter>[FT] GameServer\Corrections</Filter>
+    </ClCompile>
+    <ClCompile Include="Authority.cpp">
+      <Filter>[FT] Customs\System\Authority</Filter>
+    </ClCompile>
+    <ClCompile Include="Roleta.cpp">
+      <Filter>[FT] Customs\System\Roleta</Filter>
+    </ClCompile>
+    <ClCompile Include="Potion.cpp">
+      <Filter>[FT] Customs\System\Potion</Filter>
+    </ClCompile>
+    <ClCompile Include="Quest.cpp">
+      <Filter>[FT] Customs\System\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="FlagEvent.cpp">
+      <Filter>[FT] Customs\Events\FlagEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="Rank.cpp">
+      <Filter>[FT] Customs\System\Rank</Filter>
+    </ClCompile>
+    <ClCompile Include="Ring.cpp">
+      <Filter>[FT] Customs\System\Ring</Filter>
+    </ClCompile>
+    <ClCompile Include="PairEvent.cpp">
+      <Filter>[FT] Customs\Events\PairEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="RoletaEvent.cpp">
+      <Filter>[FT] Customs\Events\RoletaEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="Auto.cpp">
+      <Filter>[CMZ] Customs\Auto</Filter>
+    </ClCompile>
+    <ClCompile Include="Offline.cpp">
+      <Filter>[FT] Customs\System\Offline</Filter>
+    </ClCompile>
+    <ClCompile Include="Party.cpp">
+      <Filter>[FT] Customs\System\Party</Filter>
+    </ClCompile>
+    <ClCompile Include="DropEvent.cpp">
+      <Filter>[FT] Customs\Events\DropEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="Experience.cpp">
+      <Filter>[CMZ] Customs\Experience</Filter>
+    </ClCompile>
+    <ClCompile Include="UfcEvent.cpp">
+      <Filter>[FT] Customs\Events\UfcEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleEvent.cpp">
+      <Filter>[FT] Customs\Events\BattleEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="Reward.cpp">
+      <Filter>[FT] Customs\System\Reward</Filter>
+    </ClCompile>
+    <ClCompile Include="Buy.cpp">
+      <Filter>[FT] Customs\Buy</Filter>
+    </ClCompile>
+    <ClCompile Include="Pet.cpp">
+      <Filter>[CMZ] Customs\Pet</Filter>
+    </ClCompile>
+    <ClCompile Include="Patent.cpp">
+      <Filter>[FT] Customs\System\Patent</Filter>
+    </ClCompile>
+    <ClCompile Include="Attribute.cpp">
+      <Filter>[FT] Customs\System\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="DevilEvent.cpp">
+      <Filter>[FT] Customs\Events\DevilEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="Block.cpp">
+      <Filter>[FT] Customs\System\Block</Filter>
+    </ClCompile>
+    <ClCompile Include="KingEvent.cpp">
+      <Filter>[FT] Customs\Events\KingEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="Pack.cpp">
+      <Filter>[FT] Customs\System\Pack</Filter>
+    </ClCompile>
+    <ClCompile Include="Natal.cpp">
+      <Filter>[FT] Customs\System\Invasion\Natal</Filter>
+    </ClCompile>
+    <ClCompile Include="Pascoa.cpp">
+      <Filter>[FT] Customs\System\Invasion\Pascoa</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

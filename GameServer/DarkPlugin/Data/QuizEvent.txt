@@ -1,0 +1,137 @@
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; # ACTIVE		=	1 Ativa o evento, 0 desativa.
+; # SYNTAX		=	String usada para consultar o último quiz registrado.
+; # INTERVAL		=	Tempo em minutos entre cada pergunta.
+; # DURATION		=	Duração em minutos antes de expirar a última pergunta.
+; # REWARD		=	Premiação (0 = Sem prêmio, 1 = Moeda, 2 = Item).
+; # AMOUNT		=	Valor da moeda.
+; # COIN  	        =	Nome da moeda.
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; #	ACTIVE	SYNTAX	 INTERVAL   DURATION   REWARD   AMOUNT   COIN
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0
+	1	"/quiz"	 55	    10	       1	30	 "Cashs"
+end
+
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; # QUESTION		=	Pergunta.
+; # ANSWER		=	Resposta.
+;
+;  Obs: Manter "==" entre a pergunta e resposta.
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; #	QUESTION == ANSWER
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1
+	"Quem descobriu o Brasil? == Pedro Álvares Cabral"
+	"Qual o coletivo de pássaro? == Bando"
+	"Qual o coletivo de leão? == Alcatéia"
+	"Primeiro Presidente do Brasil? == Deodoro da Fonseca"
+	"Melhor jogadora de futebol do mundo? == Marta"
+	"Qual é o nome da capital do Brasil? == Brasília"
+	"Qual Social tem um pássaro azul como logo? == Twitter"
+	"Como se chama o indivíduo que pilota o avião? == Piloto"
+	"Nome do passo mais famoso de Michael Jackson? == Moonwalk"
+	"Qual é o maior país do mundo? == Rússia"
+	"Quem descobriu a América? == Cristóvão Colombo"
+	"Qual é o menor país do mundo? == Vaticano"
+	"Qual é a moeda oficial do Japão? == Iene"
+	"Qual é o estado mais populoso do Brasil? == São Paulo"
+	"Qual time é conhecido por não ter mundial? == Palmeiras"
+	"Qual time é conhecido por ser cheirinho? == Flamengo"
+	"Qual a atriz pornô mais conhecida na net? == Mia Khalifa"
+	"Qual time é conhecido por ter ajuda do juíz? == Corinthians"
+	"9 meses equivalem a quantas semanas? == 36"
+	"Qual é o time com mais mundiais no Brasil? == São Paulo"
+        "Adivinha!!! Dica: N° de 0 a 100! == 9"
+	"Quantos são 9 x 9 ? == 81"
+	"Quantos são 1.000-951 ? == 49"
+	"Adivinha!!! Dica: Uma letra (minúscula)! == y"
+	"Quantos são 10+10 == 20"
+	"The Flash Quiz:  Horripilante == Horripilante"
+	"Qual resposta dessa divisão : 999/3? == 333"
+	"Qual nome da melhor promoção do ano? == Black Friday"
+	"The Flash Quiz: Santiago Bernabéu == Santiago Bernabéu"
+        "O que a palavra legend significa em português? == Lenda"
+        "Quantos são 5 + 5 x 6 ? == 35"
+	"Qual o maior animal terrestre? == Elefante africano"
+	"The Flash Quiz: ZzzzzzZzzzzZzZZ == ZzzzzzZzzzzZzZZ"
+	"De onde é a invenção do chuveiro elétrico? == Brasil"
+	"Por quantos estados o Brasil é composto? == 26"
+	"Quantos são 10x10 ? == 100"
+	"Onde sera realizado a Copa do Mundo em 2022? == Catar"
+	"The Flash Quiz: 1010101001010001 == 1010101001010001"
+	"Qual o nome do primeiro avião de Santos Dumont? == 14 Bis"
+	"Quantas estrelas fazem parte do Cruzeiro do Sul? == 5"
+	"Quantas sílabas tem a palavra paralelepípedo? == 7"
+	"The Flash Quiz: Corre Berg == Corre Berg"
+	"Quantos são 100x0 ? == 0"
+	"Qual a maior estrela do Sistema Solar? == Sol"
+	"Quem é o atual presidente americano? == Donald Trump"
+	"Quem pintou o quadro Mona Lisa? == Leonardo da Vinci"
+	"Em que ano derrubaram as Torres Gêmeas? == 2001"
+	"Qual é a maior ave do mundo? == Avestruz"
+	"Quantos são 33-3 ? == 30"
+	"Quantos ossos tem o corpo humano? == 206"
+	"Quem é o homem mais rápido do mundo? == Usain Bolt"
+	"Qual é o maior animal vivo? == Baleia Azul"
+	"The Flash Quiz: KkkkkkkkKKKkK == KkkkkkkkKKKkK"
+        "Qual animal vive no deserto e parece cavalo? == Camelo"
+        "Qual maior goleiro artilheiro do mundo? == Rogério Ceni"
+        "Qual campeonato de futebol mais valorizado? == Champions"
+        "Qual o nome do rei do futebol? == Pelé"
+        "Qual o nome do maior nadador do mundo? == Michael Felps"
+        "De quem é a música Otherside? == Red Hot Chilli Peppers"
+        "Quanto é 25+25-25+20? == 45"
+        "Qual a raiz quadrada de 81? == 9" 
+        "Qual nome do presidente do Brasil? == Jair Bolsonaro"
+        "Qual nome do vice presidente? == General Mourão"
+        "Qual o melhor eskatista da história? == Tony Hawk"
+        "Melhor lutador de todos os tempos? == Jon Jones"
+        "Qual o nome do rei do reggae? == Bob Marley"
+        "Qual o desenho que tem o Vegeta? == Dragon ball"
+        "Qual o desenho que tem o kakashi? == Naruto"
+        "Qual o nome do pai do Crhis? == Julius"
+        "Qual o filme dos heróis da MARVEL juntos? == Vingadores"
+        "Qual o nome do Wolverine? == Logan"
+        "Qual a capital da Bahia? == Salvador"
+        "Qual a capital de Pernambuco? == Recife"
+        "Qual a capital de São Paulo? == São Paulo"
+        "Qual a capital do Rio de Janeiro? == Rio de Janeiro"
+        "Qual o filme brasileiro faca na caveira? == Tropa de Elite"
+	"Qual comida fica ótima com carne ou frango? == Strogonoff"
+	"Qual o nome do criador do Facebook? == Mark Zuckerberg"
+	"Qual o nome do criador da Microsoft? == Bill Gates"
+	"Qual o nome do criador da Apple? == Steve Jobs"
+	"Quanto é 50-23? == 27"
+	"Qual mês do ano se comemora Páscoa? == Abril"
+	"Qual o apelido do Ronaldo? == Fenômeno"
+	"Qual maior goleador da Champions? == Cristiano Ronaldo"
+	"Jogador ídolo do Barcelona? == Lionel Messi"
+	"Nome da mulher do jogador Pique? == Shakira"
+	"Quantas unidades de PoçãoHP vende no bar? == 255"
+	"Qual cantor sertanejo é vesguinho? == Luan Santana"
+	"De quem é a música Vida Boa? == Vitor e Leo"
+	"De quem é a música Foguetão? == Mc JhoJhow"
+	"De quem é a música A Vida é Desafio? == Edi Rock"
+	"De quem é a música Equalize? == Pitty"
+	"De quem é a música Artigo 157? == Racionais Mcs"
+	"De quem é a música Roda Gigante? == Mc Rodolfinho"
+	"De quem é a música Amiga da Minha Mulher? == Seu Jorge"
+end
+
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; # GROUP		=	Grupo do item.
+; # INDEX		=	Indice do item.
+; # LEVEL		=	Level do item.
+; # LUCK		=	Atribui luck ao item.
+; # SKILL		=	Atribui Skill ao item.
+; # OPT			=	Adicional do item.
+; # EXE			=	Define se o item é excelente.
+; # QUANT		=	Quantidade de itens a dropar.
+; # NAME    	        =       Nome do item.
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; #  	GROUP   INDEX   LEVEL   LUCK    SKILL    OPT      EXE      QUANT    NAME
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2
+	0	0	13	1	0	 7	  63       2	    "Kris"
+end

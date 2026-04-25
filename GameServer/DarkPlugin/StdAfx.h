@@ -1,0 +1,121 @@
+#pragma once
+
+#define WIN32_LEAN_AND_MEAN
+#define _CRT_SECURE_NO_DEPRECATE
+
+#include <Windows.h>
+#include <WinSock2.h>
+#include <WinUser.h>
+#include <Iostream>
+#include <Time.h>
+#include <Conio.h>
+#include <stdio.h>
+#include <Tchar.h>
+#include <Math.h>
+#include <Stdlib.h>
+#include <vector>
+#include <rpc.h>
+#include <rpcdce.h>
+#include <fcntl.h>
+#include <io.h>
+#include <process.h>
+#include <string.h>
+#include <string>
+#include <map>
+#include <fstream>
+#include <sql.h>
+#include <sqlext.h>
+#include <algorithm>
+#include <thread>
+#include <array>
+#include <list>
+#include <cctype>
+
+#pragma comment(lib,"user32.lib") 
+#pragma comment(lib,"ws2_32.lib")
+#pragma comment(lib,"rpcrt4.lib")
+
+#include "Offsets.h"
+#include "Setting.h"
+#include "Biblioteca.h"
+#include "Magic.h"
+#include "Database.h"
+#include "Manager.h"
+#include "Logs.h"
+#include "Optimize.h"
+#include "Protocol.h"
+#include "Connect.h"
+#include "News.h"
+#include "Shop.h"
+#include "Reset.h"
+#include "Master.h"
+#include "Packets.h"
+#include "Tokenizer.h"
+#include "Flood.h"
+#include "Speed.h"
+#include "Disconnect.h"
+#include "Dupe.h"
+#include "Ware.h"
+#include "Unicode.h"
+#include "Treasure.h"
+#include "Balancer.h"
+#include "BloodEvent.h"
+#include "DuelEvent.h"
+#include "PegaEvent.h"
+#include "SobreEvent.h"
+#include "BossEvent.h"
+#include "HappyEvent.h"
+#include "QuizEvent.h"
+#include "DeathEvent.h"
+#include "CoinEvent.h"
+#include "RaffleEvent.h"
+#include "TheftEvent.h"
+#include "FlagEvent.h"
+#include "PairEvent.h"
+#include "RoletaEvent.h"
+#include "Display.h"
+#include "Functions.h"
+#include "Querys.h"
+#include "Teleport.h"
+#include "Mapas.h"
+#include "Corrections.h"
+#include "Authority.h"
+#include "Command.h"
+#include "Dropping.h"
+#include "Message.h"
+#include "Exclusive.h" // [ Alteração ] - Steel.h ->  Exclusive.h
+#include "Limited.h" // [ Alteração ] - Silver.h -> Limited.h
+#include "Sets.h" // [ Alteração ] - Golden.h -> Sets.h
+
+#include "Wings.h" // [ Alteração ] - Bronze.h -> Wings.h
+#include "Weapons.h" // [ Alteração ] - Black.h -> Weapons.h
+
+#include "Bank.h"
+#include "Attack.h"
+#include "Bonus.h"
+#include "Duel.h"
+#include "Collector.h"
+#include "Roleta.h"
+#include "Potion.h"
+#include "Quest.h"
+#include "Rank.h"
+#include "Ring.h"
+#include "Auto.h"
+#include "Offline.h"
+#include "Party.h"
+#include "DropEvent.h"
+#include "Experience.h"
+#include "UfcEvent.h"
+#include "BattleEvent.h"
+#include "Natal.h"
+#include "Reward.h"
+#include "Buy.h"
+#include "Pet.h"
+#include "Patent.h"
+#include "Attribute.h"
+#include "DevilEvent.h"
+#include "Block.h"
+#include "KingEvent.h"
+#include "Pack.h"
+#include "Pascoa.h"
+#include "License.h"

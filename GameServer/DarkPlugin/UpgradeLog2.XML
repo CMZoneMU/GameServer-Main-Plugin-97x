@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Plugin">
+</Property><Property Name="Solution File" Value="C:\Users\Anderson\Desktop\Dark Plugin\Plugin.sln">
+</Property><Property Name="User Options File" Value="C:\Users\Anderson\Desktop\Dark Plugin\Plugin.suo">
+</Property><Property Name="Date" Value="quinta-feira, 8 de maio de 2014">
+</Property><Property Name="Time" Value="20:05">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Plugin.sln" Description="File successfully backed up as C:\Users\Anderson\Desktop\Dark Plugin\Plugin.sln.old">
+</Event><Event ErrorLevel="0" Project="" Source="Plugin.suo" Description="File successfully backed up as C:\Users\Anderson\Desktop\Dark Plugin\Plugin.suo.old">
+</Event><Event ErrorLevel="0" Project="Plugin" Source="Plugin.vcproj" Description="Converting project file 'C:\Users\Anderson\Desktop\Dark Plugin\Plugin.vcproj'.">
+</Event><Event ErrorLevel="1" Project="Plugin" Source="Plugin.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="Plugin" Source="Plugin.vcproj" Description="Done converting to new project file 'C:\Users\Anderson\Desktop\Dark Plugin\Plugin.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="Plugin" Source="Plugin.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Plugin.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Plugin.sln" Description="Converted">
+</Event></UpgradeLog>

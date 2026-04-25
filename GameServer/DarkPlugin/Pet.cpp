@@ -58,16 +58,16 @@ void cPet::Command(int aIndex, char* msg)
 				switch (gObj[aIndex].Class)
 				{
 				case 0:
-					this->Add(aIndex, 173, gObj[aIndex].X - 1, gObj[aIndex].Y + 1);
+					this->Add(aIndex, 163, gObj[aIndex].X - 1, gObj[aIndex].Y + 1);
 					break;
 				case 1:
-					this->Add(aIndex, 172, gObj[aIndex].X - 1, gObj[aIndex].Y + 1);
+					this->Add(aIndex, 164, gObj[aIndex].X - 1, gObj[aIndex].Y + 1);
 					break;
 				case 2:
-					this->Add(aIndex, 174, gObj[aIndex].X - 1, gObj[aIndex].Y + 1);
+					this->Add(aIndex, 165, gObj[aIndex].X - 1, gObj[aIndex].Y + 1);
 					break;
 				case 3:
-					this->Add(aIndex, 175, gObj[aIndex].X - 1, gObj[aIndex].Y + 1);
+					this->Add(aIndex, 166, gObj[aIndex].X - 1, gObj[aIndex].Y + 1);
 					break;
 				}
 
@@ -88,16 +88,16 @@ void cPet::Command(int aIndex, char* msg)
 				switch (gObj[aIndex].Class)
 				{
 				case 0:
-					this->Add(aIndex, 173, gObj[aIndex].X - 1, gObj[aIndex].Y + 1);
+					this->Add(aIndex, 164, gObj[aIndex].X - 1, gObj[aIndex].Y + 1);
 					break;
 				case 1:
-					this->Add(aIndex, 172, gObj[aIndex].X - 1, gObj[aIndex].Y + 1);
+					this->Add(aIndex, 163, gObj[aIndex].X - 1, gObj[aIndex].Y + 1);
 					break;
 				case 2:
-					this->Add(aIndex, 174, gObj[aIndex].X - 1, gObj[aIndex].Y + 1);
+					this->Add(aIndex, 165, gObj[aIndex].X - 1, gObj[aIndex].Y + 1);
 					break;
 				case 3:
-					this->Add(aIndex, 175, gObj[aIndex].X - 1, gObj[aIndex].Y + 1);
+					this->Add(aIndex, 166, gObj[aIndex].X - 1, gObj[aIndex].Y + 1);
 					break;
 				}
 
@@ -105,7 +105,8 @@ void cPet::Command(int aIndex, char* msg)
 				{
 					int Mult = (this->_ExpPercent / 100) + 1;
 
-					Func.MsgOutput(aIndex, 0, "Mascote invocado com sucesso! Bonus de XP: %d%% (%dx EXP)", this->_ExpPercent, Mult);
+					Func.MsgOutput(aIndex, 0, "Mascote invocado com Sucesso", this->_ExpPercent, Mult);
+					Func.MsgOutput(aIndex, 0, "Bonus de XP: %d%% (%dx EXP)", this->_ExpPercent, Mult);
 				}
 				else
 				{
@@ -203,16 +204,16 @@ void cPet::Quit(LPOBJ lpObj)
 			switch (lpObj->Class)
 			{
 			case 0:
-				this->Add(lpObj->m_Index, 173, lpObj->X - 1, lpObj->Y + 1);
+				this->Add(lpObj->m_Index, 164, lpObj->X - 1, lpObj->Y + 1);
 				break;
 			case 1:
-				this->Add(lpObj->m_Index, 172, lpObj->X - 1, lpObj->Y + 1);
+				this->Add(lpObj->m_Index, 163, lpObj->X - 1, lpObj->Y + 1);
 				break;
 			case 2:
-				this->Add(lpObj->m_Index, 174, lpObj->X - 1, lpObj->Y + 1);
+				this->Add(lpObj->m_Index, 165, lpObj->X - 1, lpObj->Y + 1);
 				break;
 			case 3:
-				this->Add(lpObj->m_Index, 175, lpObj->X - 1, lpObj->Y + 1);
+				this->Add(lpObj->m_Index, 166, lpObj->X - 1, lpObj->Y + 1);
 				break;
 			}
 

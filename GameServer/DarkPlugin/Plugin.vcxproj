@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>DarkPlugin</ProjectName>
+    <ProjectGuid>{5C779544-AD03-441A-B742-5BD3C6D3BB34}</ProjectGuid>
+    <RootNamespace>Plugin</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\MuOrigem\GameServer\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Link>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <Optimization>Disabled</Optimization>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Attack.h" />
+    <ClInclude Include="Attribute.h" />
+    <ClInclude Include="Authority.h" />
+    <ClInclude Include="Auto.h" />
+    <ClInclude Include="Balancer.h" />
+    <ClInclude Include="Bank.h" />
+    <ClInclude Include="BattleEvent.h" />
+    <ClInclude Include="Weapons.h" />
+    <ClInclude Include="Block.h" />
+    <ClInclude Include="BloodEvent.h" />
+    <ClInclude Include="Bonus.h" />
+    <ClInclude Include="BossEvent.h" />
+    <ClInclude Include="Wings.h" />
+    <ClInclude Include="Buy.h" />
+    <ClInclude Include="CoinEvent.h" />
+    <ClInclude Include="Collector.h" />
+    <ClInclude Include="Command.h" />
+    <ClInclude Include="DeathEvent.h" />
+    <ClInclude Include="DevilEvent.h" />
+    <ClInclude Include="Disconnect.h" />
+    <ClInclude Include="DropEvent.h" />
+    <ClInclude Include="Duel.h" />
+    <ClInclude Include="Experience.h" />
+    <ClInclude Include="FlagEvent.h" />
+    <ClInclude Include="Sets.h" />
+    <ClInclude Include="HappyEvent.h" />
+    <ClInclude Include="Natal.h" />
+    <ClInclude Include="KingEvent.h" />
+    <ClInclude Include="Logs.h" />
+    <ClInclude Include="Magic.h" />
+    <ClInclude Include="Message.h" />
+    <ClInclude Include="Offline.h" />
+    <ClInclude Include="Optimize.h" />
+    <ClInclude Include="Pack.h" />
+    <ClInclude Include="PairEvent.h" />
+    <ClInclude Include="Party.h" />
+    <ClInclude Include="Pascoa.h" />
+    <ClInclude Include="Patent.h" />
+    <ClInclude Include="Pet.h" />
+    <ClInclude Include="Potion.h" />
+    <ClInclude Include="Quest.h" />
+    <ClInclude Include="QuizEvent.h" />
+    <ClInclude Include="RaffleEvent.h" />
+    <ClInclude Include="Rank.h" />
+    <ClInclude Include="Reward.h" />
+    <ClInclude Include="Ring.h" />
+    <ClInclude Include="Roleta.h" />
+    <ClInclude Include="RoletaEvent.h" />
+    <ClInclude Include="Setting.h" />
+    <ClInclude Include="Database.h" />
+    <ClInclude Include="Display.h" />
+    <ClInclude Include="Dropping.h" />
+    <ClInclude Include="DuelEvent.h" />
+    <ClInclude Include="Corrections.h" />
+    <ClInclude Include="Flood.h" />
+    <ClInclude Include="License.h" />
+    <ClInclude Include="Manager.h" />
+    <ClInclude Include="Mapas.h" />
+    <ClInclude Include="Master.h" />
+    <ClInclude Include="Packets.h" />
+    <ClInclude Include="PegaEvent.h" />
+    <ClInclude Include="Querys.h" />
+    <ClInclude Include="Reset.h" />
+    <ClInclude Include="Shop.h" />
+    <ClInclude Include="Protocol.h" />
+    <ClInclude Include="Offsets.h" />
+    <ClInclude Include="Functions.h" />
+    <ClInclude Include="Connect.h" />
+    <ClInclude Include="Biblioteca.h" />
+    <ClInclude Include="News.h" />
+    <ClInclude Include="Limited.h" />
+    <ClInclude Include="SobreEvent.h" />
+    <ClInclude Include="Speed.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="Exclusive.h" />
+    <ClInclude Include="Teleport.h" />
+    <ClInclude Include="TheftEvent.h" />
+    <ClInclude Include="Tokenizer.h" />
+    <ClInclude Include="Treasure.h" />
+    <ClInclude Include="UfcEvent.h" />
+    <ClInclude Include="Unicode.h" />
+    <ClInclude Include="Dupe.h" />
+    <ClInclude Include="Ware.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Attack.cpp" />
+    <ClCompile Include="Attribute.cpp" />
+    <ClCompile Include="Authority.cpp" />
+    <ClCompile Include="Auto.cpp" />
+    <ClCompile Include="Balancer.cpp" />
+    <ClCompile Include="Bank.cpp" />
+    <ClCompile Include="BattleEvent.cpp" />
+    <ClCompile Include="Weapons.cpp" />
+    <ClCompile Include="Block.cpp" />
+    <ClCompile Include="BloodEvent.cpp" />
+    <ClCompile Include="Bonus.cpp" />
+    <ClCompile Include="BossEvent.cpp" />
+    <ClCompile Include="Wings.cpp" />
+    <ClCompile Include="Buy.cpp" />
+    <ClCompile Include="CoinEvent.cpp" />
+    <ClCompile Include="Collector.cpp" />
+    <ClCompile Include="Command.cpp" />
+    <ClCompile Include="Database.cpp" />
+    <ClCompile Include="DeathEvent.cpp" />
+    <ClCompile Include="DevilEvent.cpp" />
+    <ClCompile Include="Disconnect.cpp" />
+    <ClCompile Include="Display.cpp" />
+    <ClCompile Include="DropEvent.cpp" />
+    <ClCompile Include="Dropping.cpp" />
+    <ClCompile Include="Duel.cpp" />
+    <ClCompile Include="DuelEvent.cpp" />
+    <ClCompile Include="Corrections.cpp" />
+    <ClCompile Include="Experience.cpp" />
+    <ClCompile Include="FlagEvent.cpp" />
+    <ClCompile Include="Flood.cpp" />
+    <ClCompile Include="Sets.cpp" />
+    <ClCompile Include="HappyEvent.cpp" />
+    <ClCompile Include="Natal.cpp" />
+    <ClCompile Include="KingEvent.cpp" />
+    <ClCompile Include="License.cpp" />
+    <ClCompile Include="Logs.cpp" />
+    <ClCompile Include="Magic.cpp" />
+    <ClCompile Include="Manager.cpp" />
+    <ClCompile Include="Mapas.cpp" />
+    <ClCompile Include="Master.cpp" />
+    <ClCompile Include="Message.cpp" />
+    <ClCompile Include="Offline.cpp" />
+    <ClCompile Include="Optimize.cpp" />
+    <ClCompile Include="Pack.cpp" />
+    <ClCompile Include="Packets.cpp" />
+    <ClCompile Include="PairEvent.cpp" />
+    <ClCompile Include="Party.cpp" />
+    <ClCompile Include="Pascoa.cpp" />
+    <ClCompile Include="Patent.cpp" />
+    <ClCompile Include="PegaEvent.cpp" />
+    <ClCompile Include="Pet.cpp" />
+    <ClCompile Include="Potion.cpp" />
+    <ClCompile Include="Protocol.cpp" />
+    <ClCompile Include="Querys.cpp" />
+    <ClCompile Include="Quest.cpp" />
+    <ClCompile Include="QuizEvent.cpp" />
+    <ClCompile Include="RaffleEvent.cpp" />
+    <ClCompile Include="Rank.cpp" />
+    <ClCompile Include="Reset.cpp" />
+    <ClCompile Include="DllMain.cpp" />
+    <ClCompile Include="Functions.cpp" />
+    <ClCompile Include="Connect.cpp" />
+    <ClCompile Include="Biblioteca.cpp" />
+    <ClCompile Include="Reward.cpp" />
+    <ClCompile Include="Ring.cpp" />
+    <ClCompile Include="Roleta.cpp" />
+    <ClCompile Include="RoletaEvent.cpp" />
+    <ClCompile Include="Setting.cpp" />
+    <ClCompile Include="News.cpp" />
+    <ClCompile Include="Shop.cpp" />
+    <ClCompile Include="Limited.cpp" />
+    <ClCompile Include="SobreEvent.cpp" />
+    <ClCompile Include="Speed.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Exclusive.cpp" />
+    <ClCompile Include="Teleport.cpp" />
+    <ClCompile Include="TheftEvent.cpp" />
+    <ClCompile Include="Treasure.cpp" />
+    <ClCompile Include="UfcEvent.cpp" />
+    <ClCompile Include="Unicode.cpp" />
+    <ClCompile Include="Dupe.cpp" />
+    <ClCompile Include="Ware.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

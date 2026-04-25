@@ -1,0 +1,47 @@
+#pragma once
+
+struct sPascoa
+{
+	int					_Day;
+	int					_Hours;
+	int					_Minutes;
+	int					_Monster;
+	int					_Duration;
+	BYTE				_Type;
+	BYTE				_Index;
+	BYTE				_Level;
+	BYTE				_Skill;
+	BYTE				_Luck;
+	BYTE				_Option;
+	BYTE				_Excelente;
+	BYTE                _Quantity;
+};
+
+class cPascoa
+{
+public:
+	cPascoa();
+
+public:
+	bool Load();
+	void Run();
+	void Disappear();
+	void Assasin(int aIndex);
+	void Rabbit(int aIndex);
+
+public:
+	bool					_Active;
+	bool                    _Sended;
+	int                     _Class[2];
+	int                     _Total[2];
+	int                     _Count[2];
+	BYTE                    _Mapa;
+	short                   _X;
+	short                   _Y;
+	char                    _Buffer[255];
+
+private:
+	sPascoa			        PascoaStruct[1000];
+};
+
+extern cPascoa Pascoa;

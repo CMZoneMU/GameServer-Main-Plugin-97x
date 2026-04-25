@@ -1,0 +1,24 @@
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; # NAME		=	Nome do personagem.
+; # [1]                 =       O personagem tem autoridade para usar o comando premiar? 1 = sim, 0 = não.
+; # [2]                 =       O personagem tem autoridade para usar o comando moveall? 1 = sim, 0 = não.
+; # [3]                 =       O personagem tem autoridade para usar o comando skin? 1 = sim, 0 = não.
+; # [4]                 =       O personagem tem autoridade para usar o comando gmove? 1 = sim, 0 = não.
+; # [5]                 =       O personagem tem autoridade para usar o comando firework? 1 = sim, 0 = não.
+; # [6]                 =       O personagem tem autoridade para usar o comando drop? 1 = sim, 0 = não.
+; # [7]                 =       O personagem tem autoridade para usar o comando evento? 1 = sim, 0 = não.
+; # [8]                 =       O personagem tem autoridade para usar o comando block? 1 = sim, 0 = não.
+; # [9]                 =       O personagem tem autoridade para usar o comando disconnect? 1 = sim, 0 = não.
+; # [10]                =       O personagem tem autoridade para usar o comando matamata? 1 = sim, 0 = não.
+; # [11]                =       O personagem tem autoridade para usar o comando pegapega? 1 = sim, 0 = não.
+; # [12]                =       O personagem tem autoridade para usar o comando survivor? 1 = sim, 0 = não.
+; # [13]                =       O personagem tem autoridade para usar o comando dupla? 1 = sim, 0 = não.
+; # [14]                =       O personagem tem autoridade para usar o comando roleta? 1 = sim, 0 = não.
+; # [15]                =       O personagem tem autoridade para usar o comando ufc? 1 = sim, 0 = não.
+; # [16]                =       O personagem tem autoridade para usar o comando battle? 1 = sim, 0 = não.                                                       
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; #	Name         [1]    [2]    [3]    [4]    [5]    [6]    [7]    [8]    [9]    [10]    [11]    [12]    [13]    [14]    [15]    [16]                                                                         
+;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0
+        "-_Dark_-"   1      1      1      1      1      1      1      1      1      1       1       1       1       1       1       1
+end
