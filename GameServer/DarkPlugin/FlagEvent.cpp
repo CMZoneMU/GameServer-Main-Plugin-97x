@@ -31,6 +31,8 @@ bool cFlagEvent::Load()
 
 		strcpy_s(this->_Column, sizeof(this->_Column), (Section.Rows[1].GetStringPtr(6)));
 		strcpy_s(this->_Coin, sizeof(this->_Coin), (Section.Rows[1].GetStringPtr(7)));
+		strcpy_s(this->_Syntax[2], sizeof(this->_Syntax[2]), (Section.Rows[1].GetStringPtr(8)));
+		strcpy_s(this->_Syntax[3], sizeof(this->_Syntax[3]), (Section.Rows[1].GetStringPtr(9)));
 	}
 
 	if (Group.GetSection(1, Section))
@@ -985,4 +987,27 @@ bool cFlagEvent::Equip(LPOBJ lpObj, BYTE SourcePos, BYTE TargetPos)
 	return true;
 }
 
+
+void cFlagEvent::StartManual()
+{
+	this->Finish(0);
+
+	this->_Count = 0;
+	this->_Points[0] = 0;
+	this->_Points[1] = 0;
+
+	for (int i = OBJECT_MIN; i < OBJECT_MAX; i++)
+	{
+		if (gObj[i].Connected == 3)
+		{
+			Func.MsgOutput(i, 0, "[ TESTE ] O evento ROUBA BANDEIRA iniciou!");
+			Func.MsgOutput(i, 0, "Fale com o Murphy para participar.");
+		}
+	}
+
+	this->_Progress = true;
+}
 cFlagEvent FlagEvent;
+
+
+

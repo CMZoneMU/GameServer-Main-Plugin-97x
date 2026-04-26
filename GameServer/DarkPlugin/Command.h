@@ -32,9 +32,10 @@ public:
 	void Rei(int aIndex, char* msg);
 	void Finish(int aIndex);
 	void OpenWare(int aIndex);
+	bool TestEvent(int aIndex, const char* Text);
 
 public:
-	bool					_Active[16];
+	bool					_Active[100];
 	bool					_Vip[7];
 	bool                    _Event;
 	int					    _Color;

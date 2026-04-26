@@ -31,6 +31,7 @@ struct sFlagEvent
 class cFlagEvent
 {
 public:
+	char _Syntax[10][25];
 	cFlagEvent();
 
 public:
@@ -50,6 +51,7 @@ public:
 	void Finish(BYTE Mode);
 	void Quit(LPOBJ lpObj);
 	bool Equip(LPOBJ lpObj, BYTE SourcePos, BYTE TargetPos);
+	void StartManual();
 
 public:
 	bool					_Active;
@@ -72,6 +74,7 @@ public:
 	char                    _Column[255];
 	char                    _Coin[255];
 	char                    _Buffer[255];
+	
 	std::list<sFlagEvent>   Team;
 
 public:
@@ -87,3 +90,5 @@ private:
 };
 
 extern cFlagEvent FlagEvent;
+
+

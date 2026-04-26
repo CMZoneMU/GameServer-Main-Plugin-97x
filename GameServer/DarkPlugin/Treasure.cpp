@@ -21,6 +21,8 @@ bool TREASURE_Custom::Load()
 			this->_TimeOpen = Section.Rows[0].GetInt(1) * 60;
 			this->_TimeBuy = Section.Rows[0].GetInt(2);
 			this->_TimeClose = Section.Rows[0].GetInt(3) * 60;
+			strcpy_s(this->_Syntax[2], sizeof(this->_Syntax[2]), (Section.Rows[0].GetStringPtr(4)));
+			strcpy_s(this->_Syntax[3], sizeof(this->_Syntax[3]), (Section.Rows[0].GetStringPtr(5)));
 		}
 	}
 
@@ -195,4 +197,13 @@ const char* TREASURE_Custom::Winner() const
 	return this->_Winner;
 }
 
+
+void TREASURE_Custom::StartManual()
+{
+	this->_State = treasureOff;
+	this->_TimeCount = 0;
+}
 TREASURE_Custom Treasure;
+
+
+

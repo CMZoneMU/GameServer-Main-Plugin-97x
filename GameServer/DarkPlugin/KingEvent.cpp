@@ -28,6 +28,8 @@ bool cKingEvent::Load()
 		this->_Active = Section.Rows[0].GetInt(0) > 0 ? true : false;
 		strcpy_s(this->_Syntax[0], sizeof(this->_Syntax[0]), (Section.Rows[0].GetStringPtr(1)));
 		strcpy_s(this->_Syntax[1], sizeof(this->_Syntax[1]), (Section.Rows[0].GetStringPtr(2)));
+		strcpy_s(this->_Syntax[2], sizeof(this->_Syntax[2]), (Section.Rows[0].GetStringPtr(3)));
+		strcpy_s(this->_Syntax[3], sizeof(this->_Syntax[3]), (Section.Rows[0].GetStringPtr(4)));
 
 		this->_MapNumber[0] = Section.Rows[1].GetInt(0);
 		this->_X[0] = Section.Rows[1].GetInt(1);
@@ -750,3 +752,4 @@ void cKingEvent::Quit(LPOBJ lpObj)
 }
 
 cKingEvent KingEvent;
+

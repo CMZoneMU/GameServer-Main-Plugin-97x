@@ -3,9 +3,12 @@
 ; # TIMEOPEN		=       Tempo em minutos para o inicio do evento.
 ; # TIMEBUY	        =       Duração em segundos para retirada do tesouro.
 ; # TIMECLOSE           =       Duração em minutos.
+; # SYNTAX TEST		=	String usada para testar o evento
+; # SYNTAX NAME		=	String usada para puxar nome do evento
 ;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-; #  ACTIVE   TIMEOPEN 	TIMEBUY  TIMECLOSE
+; #  ACTIVE   TIMEOPEN 	TIMEBUY  TIMECLOSE    SYNTAX NAME    SYNTAX NAME
 ;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 0
-     1	      60	20       40
+       1	 60	   20       40        "/testevent"    "tesouro"
 end
+

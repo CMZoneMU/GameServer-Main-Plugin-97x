@@ -17,17 +17,20 @@ struct sQuiz
 class cQuiz
 {
 public:
+	char _Syntax[10][25];
 	bool Load();
 	bool Check(int aIndex, const char* Text);
 	void Run();
 	void Winner(int aIndex, const char* Text);
 	void Finish();
 	void Time();
+	void StartManual();
 
 public:
 	bool					_Active;
 	bool                    _Sended;
-	char					_Syntax[25];
+	
+	
 	int						_Interval;
 	int						_Duration;
 	char					_Question[255];
@@ -46,3 +49,5 @@ private:
 };
 
 extern cQuiz QuizEvent;
+
+

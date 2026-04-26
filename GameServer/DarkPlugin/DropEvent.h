@@ -21,19 +21,24 @@ struct sDropEvent
 class cDropEvent
 {
 public:
+	char _Syntax[10][25];
 	bool Load();
 	void Run();
 	static void Repeat(void* lpParam);
 	void Mapa(int MapNumber);
+	void StartManual();
 
 public:
 	bool                _Active[2];
 	int                 _Count[2];
 	int                 _MapNumber;
 	const char*			_MapName;
+	
 
 private:
 	sDropEvent			EventStruct[1000];
 };
 
 extern cDropEvent DropEvent;
+
+

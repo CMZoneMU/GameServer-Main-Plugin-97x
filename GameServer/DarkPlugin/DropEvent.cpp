@@ -18,6 +18,8 @@ bool cDropEvent::Load()
 	if (Group.GetSection(0, Section))
 	{
 		this->_Active[0] = Section.Rows[0].GetInt(0) > 0 ? true : false;
+		strcpy_s(this->_Syntax[2], sizeof(this->_Syntax[2]), (Section.Rows[0].GetStringPtr(1)));
+		strcpy_s(this->_Syntax[3], sizeof(this->_Syntax[3]), (Section.Rows[0].GetStringPtr(2)));
 	}
 
 	if (Group.GetSection(1, Section))
@@ -236,4 +238,28 @@ void cDropEvent::Mapa(int MapNumber)
 	}
 }
 
+
+void cDropEvent::StartManual()
+{
+	srand(time(NULL));
+
+	if (this->_Count[0] <= 0) return;
+
+	int Sortear = rand() % this->_Count[0];
+
+	this->_MapNumber = this->EventStruct[Sortear]._MapNumber[0];
+	this->Mapa(this->_MapNumber);
+
+	for (int Index = OBJECT_MIN; Index < OBJECT_MAX; Index++)
+	{
+		if (gObj[Index].Connected == 3)
+		{
+			Func.MsgOutput(Index, 0, "[ TESTE ] O DROP EVENT comecou em %s!", this->_MapName);
+		}
+	}
+
+	_beginthread(cDropEvent::Repeat, 0, &this->EventStruct[Sortear]);
+}
 cDropEvent DropEvent;
+
+

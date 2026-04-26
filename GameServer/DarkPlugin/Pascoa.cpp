@@ -22,6 +22,8 @@ bool cPascoa::Load()
 	if (Group.GetSection(0, Section))
 	{
 		this->_Active = Section.Rows[0].GetInt(0) > 0 ? true : false; this->_Class[0] = Section.Rows[0].GetInt(1); this->_Class[1] = Section.Rows[0].GetInt(2);
+		strcpy_s(this->_Syntax[2], sizeof(this->_Syntax[2]), (Section.Rows[0].GetStringPtr(3)));
+		strcpy_s(this->_Syntax[3], sizeof(this->_Syntax[3]), (Section.Rows[0].GetStringPtr(4)));
 	}
 
 	if (Group.GetSection(1, Section))
@@ -192,8 +194,7 @@ void cPascoa::Disappear()
 		this->_Sended = false;
 	}
 
-	this->_Class[0] = -1;
-	this->_Class[1] = -1;
+	// Classes mantidas para reload
 
 	this->_Total[0] = 0;
 	this->_Total[1] = 0;
@@ -265,4 +266,47 @@ void cPascoa::Rabbit(int aIndex)
 	Func.FireWork(aIndex);
 }
 
+
+void cPascoa::StartManual()
+{
+	this->Disappear();
+	this->Load();
+
+	srand(time(NULL));
+
+	BYTE Sortear = (BYTE)(rand() % sizeof(PascoaMapNumber));
+	this->_Mapa = PascoaMapNumber[Sortear];
+
+	this->_Total[0] = 0;
+
+	for (int x = 0; x < 3; x++)
+	{
+		while (Func.GetBoxPosition(this->_Mapa, 10, 10, 240, 240, this->_X, this->_Y) == 0) {}
+		Func.MonsterAdd(this->_Class[0], this->_Mapa, this->_X, this->_Y);
+		this->_Total[0]++;
+	}
+
+	this->_Total[1] = 0;
+
+	for (int x = 0; x < 15; x++)
+	{
+		while (Func.GetBoxPosition(this->_Mapa, 10, 10, 240, 240, this->_X, this->_Y) == 0) {}
+		Func.MonsterAdd(this->_Class[1], this->_Mapa, this->_X, this->_Y);
+		this->_Total[1]++;
+	}
+
+	for (int Index = OBJECT_MIN; Index < OBJECT_MAX; Index++)
+	{
+		if (gObj[Index].Connected == 3)
+		{
+			Func.MsgOutput(Index, 0, "[ TESTE ] A invasao de Pascoa comecou em %s", PascoaMapName[this->_Mapa]);
+			Func.MsgOutput(Index, 0, "Mate-os para ser recompensado!");
+		}
+	}
+
+	this->_Sended = true;
+}
 cPascoa Pascoa;
+
+
+

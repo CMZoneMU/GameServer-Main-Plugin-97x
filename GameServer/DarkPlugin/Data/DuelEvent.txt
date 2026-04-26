@@ -2,11 +2,13 @@
 ; # ACTIVE		=	1 Ativa o comando, 0 desativa.
 ; # SYNTAX PLAYER       =       String usada para ativar o comando.
 ; # SYNTAX GM		=	String usada para ativar o comando.
+; # SYNTAX TEST		=	String usada para testar o evento
+; # SYNTAX NAME		=	String usada para puxar nome do evento
 ;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-; #	ACTIVE	 SYNTAX PLAYER   SYNTAX GM
+; #	ACTIVE	 SYNTAX PLAYER   SYNTAX GM       SYNTAX TEST    SYNTAX NAME	
 ;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 0
-	1	 "/irmatamata"   "/matamata"
+	1	 "/irmatamata"   "/matamata"     "/testevent"    "matamata"
 
 ;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ;  WAITMAP		=	Mapa de espera.

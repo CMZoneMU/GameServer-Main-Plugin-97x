@@ -24,7 +24,8 @@ public:
 
 public:
 	bool				_Active;
-	char				_Syntax[2][25];
+	char _Syntax[10][25];
+	
 	char                _Notice[255];
 	BYTE				_MapNumber;
 	BYTE				_X;

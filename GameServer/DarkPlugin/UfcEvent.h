@@ -34,7 +34,8 @@ public:
 public:
 	bool					_Active;
 	bool                    _Sended;
-	char					_Syntax[2][25];
+	char _Syntax[10][25];
+	
 	char                    _Notice[60];
 	char                    _Buffer[3][255];
 	BYTE					_MapNumber[2];

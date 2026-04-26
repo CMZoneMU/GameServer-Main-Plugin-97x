@@ -3,14 +3,16 @@
 class TREASURE_Custom
 {
 public:
+	char _Syntax[10][25];
 	bool Load();
 	void Check();
 	void Talk(OBJECTSTRUCT* Npc, OBJECTSTRUCT* Player);
 	BYTE ShopNumber() const;
 	const char* Winner() const;
-
-private:
+	void StartManual();
 	bool				_Active;
+
+public:
 	BYTE				_State;
 	DWORD				_TimeCount;
 	DWORD				_TimeOpen;

@@ -8,7 +8,7 @@ struct EventStart
 	int                     _Time;
 	int                     _Class;
 	BYTE                    _Type;
-	BYTE                    _Index;
+	int                     _Index;
 	BYTE                    _Level;
 	BYTE                    _Skill;
 	BYTE                    _Luck;
@@ -54,10 +54,12 @@ public:
 	void CheckBuffs(LPOBJ lpObj);
 	static void Drop(void* lpParam);
 
-private:
+public:
 	bool					_Active;
+	char					_Syntax[10][25];
+
+private:
 	bool                    _Finish;
-	char				    _Syntax[2][25];
 	char                    _Notice[255];
 	BYTE				    _MapNumber;
 	BYTE				    _X;

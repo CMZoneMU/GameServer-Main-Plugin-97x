@@ -189,8 +189,7 @@ void cNatal::Disappear()
 		this->_Sended = false;
 	}
 
-	this->_Class[0] = -1;
-	this->_Class[1] = -1;
+	// Classes mantidas para reload
 
 	this->_Total[0] = 0;
 	this->_Total[1] = 0;
@@ -262,4 +261,47 @@ void cNatal::Globin(int aIndex)
 	Func.FireWork(aIndex);
 }
 
+
+void cNatal::StartManual()
+{
+	this->Disappear();
+	this->Load();
+
+	srand(time(NULL));
+
+	BYTE mapIndex = (BYTE)(rand() % 4);
+	BYTE targetMap = (mapIndex == 0) ? 0 : (mapIndex == 1) ? 2 : (mapIndex == 2) ? 3 : 1; 
+
+	this->_Mapa = targetMap;
+	char mapNames[][15] = { "Lorencia", "Dungeon", "Davias", "Noria" };
+
+	this->_Total[0] = 0;
+	for (int x = 0; x < 3; x++)
+	{
+		while (Func.GetBoxPosition(this->_Mapa, 10, 10, 240, 240, this->_X, this->_Y) == 0) {}
+		Func.MonsterAdd(this->_Class[0], this->_Mapa, this->_X, this->_Y);
+		this->_Total[0]++;
+	}
+
+	this->_Total[1] = 0;
+	for (int x = 0; x < 15; x++)
+	{
+		while (Func.GetBoxPosition(this->_Mapa, 10, 10, 240, 240, this->_X, this->_Y) == 0) {}
+		Func.MonsterAdd(this->_Class[1], this->_Mapa, this->_X, this->_Y);
+		this->_Total[1]++;
+	}
+
+	for (int Index = OBJECT_MIN; Index < OBJECT_MAX; Index++)
+	{
+		if (gObj[Index].Connected == 3)
+		{
+			Func.MsgOutput(Index, 0, "[ TESTE ] A invasao de Natal comecou em %s", mapNames[mapIndex]);
+		}
+	}
+
+	this->_Sended = true;
+}
 cNatal Natal;
+
+
+

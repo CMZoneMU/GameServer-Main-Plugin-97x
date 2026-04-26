@@ -24,6 +24,7 @@ struct sNatal
 class cNatal
 {
 public:
+	char _Syntax[10][25];
 	cNatal();
 
 public:
@@ -32,11 +33,13 @@ public:
 	void Disappear();
 	void Santa(int aIndex);
 	void Globin(int aIndex);
+	void StartManual();
 
 public:
 	bool					_Active;
 	bool                    _Sended;
 	int                     _Class[2];
+	
 	int                     _Total[2];
 	int                     _Count[2];
 	BYTE                    _Mapa;
@@ -49,3 +52,5 @@ private:
 };
 
 extern cNatal Natal;
+
+

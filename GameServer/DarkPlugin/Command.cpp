@@ -186,6 +186,12 @@ bool Commands::Management(LPBYTE Protocolo, int aIndex)
 		return true;
 	}
 
+	if (!_strnicmp((const char*)(&Protocolo[13]), "/testevent", 10))
+	{
+		this->TestEvent(aIndex, (const char*)(&Protocolo[13]));
+		return true;
+	}
+
 	if (!_stricmp((const char*)(&Protocolo[13]), "/sm"))
 	{
 		this->Class(aIndex, 0);
@@ -444,9 +450,9 @@ bool Commands::Management(LPBYTE Protocolo, int aIndex)
 		return true;
 	}
 
-	if (!_memicmp(&Protocolo[13], QuizEvent._Syntax, strlen(QuizEvent._Syntax)))
+	if (!_memicmp(&Protocolo[13], QuizEvent._Syntax[0], strlen(QuizEvent._Syntax[0])))
 	{
-		QuizEvent.Check(aIndex, (char*)(Protocolo + 13 + strlen(QuizEvent._Syntax)));
+		QuizEvent.Check(aIndex, (char*)(Protocolo + 13 + strlen(QuizEvent._Syntax[0])));
 		return true;
 	}
 
@@ -533,12 +539,12 @@ void Commands::Post(int aIndex, char* msg)
 	{
 		if (gObj[aIndex].Level < this->_Level[0])
 		{
-			Func.MsgOutput(aIndex, 1, "É necessário %d de level.", this->_Level[0]);
+			Func.MsgOutput(aIndex, 1, "Ã‰ necessÃ¡rio %d de level.", this->_Level[0]);
 			return;
 		}
 		else if (gObj[aIndex].Money < this->_Zen[0])
 		{
-			Func.MsgOutput(aIndex, 1, "É necessário %d de zen.", this->_Zen[0]);
+			Func.MsgOutput(aIndex, 1, "Ã‰ necessÃ¡rio %d de zen.", this->_Zen[0]);
 			return;
 		}
 		else if (this->_Vip[0] == true && Custom[aIndex].VipCount < 1)
@@ -592,20 +598,20 @@ void Commands::Add(int aIndex, char* msg, int Status)
 		if (strlen(msg) < 1 || Pontos <= 0)
 		{
 			Func.MsgOutput(aIndex, 1, "Erro de sintaxe!");
-			Func.MsgOutput(aIndex, 1, "Exemplo -> %s <Número>", this->_Syntax[1]);
-			Func.MsgOutput(aIndex, 1, "Exemplo -> %s <Número>", this->_Syntax[2]);
-			Func.MsgOutput(aIndex, 1, "Exemplo -> %s <Número>", this->_Syntax[3]);
-			Func.MsgOutput(aIndex, 1, "Exemplo -> %s <Número>", this->_Syntax[4]);
+			Func.MsgOutput(aIndex, 1, "Exemplo -> %s <NÃºmero>", this->_Syntax[1]);
+			Func.MsgOutput(aIndex, 1, "Exemplo -> %s <NÃºmero>", this->_Syntax[2]);
+			Func.MsgOutput(aIndex, 1, "Exemplo -> %s <NÃºmero>", this->_Syntax[3]);
+			Func.MsgOutput(aIndex, 1, "Exemplo -> %s <NÃºmero>", this->_Syntax[4]);
 			return;
 		}
 		else if (gObj[aIndex].Level < this->_Level[1])
 		{
-			Func.MsgOutput(aIndex, 1, "É necessário %d de level.", this->_Level[1]);
+			Func.MsgOutput(aIndex, 1, "Ã‰ necessÃ¡rio %d de level.", this->_Level[1]);
 			return;
 		}
 		else if (gObj[aIndex].Money < this->_Zen[1])
 		{
-			Func.MsgOutput(aIndex, 1, "É necessário %d de zen.", this->_Zen[1]);
+			Func.MsgOutput(aIndex, 1, "Ã‰ necessÃ¡rio %d de zen.", this->_Zen[1]);
 			return;
 		}
 		else if (Pontos > gObj[aIndex].LevelUpPoint)
@@ -624,21 +630,21 @@ void Commands::Add(int aIndex, char* msg, int Status)
 			{
 				if ((gObj[aIndex].Strength + Pontos) > 32767)
 				{
-					Func.MsgOutput(aIndex, 1, "O limite de pontos é 32767");
+					Func.MsgOutput(aIndex, 1, "O limite de pontos Ã© 32767");
 					return;
 				}
 				else
 				{
 					gObj[aIndex].Strength += Pontos;
 
-					Func.MsgOutput(aIndex, 1, "Adicionado %d pontos em força.", Pontos);
+					Func.MsgOutput(aIndex, 1, "Adicionado %d pontos em forÃ§a.", Pontos);
 				}
 			}
 			else if (Status == 2)
 			{
 				if ((gObj[aIndex].Dexterity + Pontos) > 32767)
 				{
-					Func.MsgOutput(aIndex, 1, "O limite de pontos é 32767");
+					Func.MsgOutput(aIndex, 1, "O limite de pontos Ã© 32767");
 					return;
 				}
 				else
@@ -652,7 +658,7 @@ void Commands::Add(int aIndex, char* msg, int Status)
 			{
 				if ((gObj[aIndex].Vitality + Pontos) > 32767)
 				{
-					Func.MsgOutput(aIndex, 1, "O limite de pontos é 32767");
+					Func.MsgOutput(aIndex, 1, "O limite de pontos Ã© 32767");
 					return;
 				}
 				else
@@ -670,7 +676,7 @@ void Commands::Add(int aIndex, char* msg, int Status)
 			{
 				if ((gObj[aIndex].Energy + Pontos) > 32767)
 				{
-					Func.MsgOutput(aIndex, 1, "O limite de pontos é 32767");
+					Func.MsgOutput(aIndex, 1, "O limite de pontos Ã© 32767");
 					return;
 				}
 				else
@@ -704,12 +710,12 @@ void Commands::ReAdd(int aIndex)
 	{
 		if (gObj[aIndex].Level < this->_Level[2])
 		{
-			Func.MsgOutput(aIndex, 1, "É necessário %d de level.", this->_Level[2]);
+			Func.MsgOutput(aIndex, 1, "Ã‰ necessÃ¡rio %d de level.", this->_Level[2]);
 			return;
 		}
 		else if (gObj[aIndex].Money < this->_Zen[2])
 		{
-			Func.MsgOutput(aIndex, 1, "É necessário %d de zen.", this->_Zen[2]);
+			Func.MsgOutput(aIndex, 1, "Ã‰ necessÃ¡rio %d de zen.", this->_Zen[2]);
 			return;
 		}
 		else if (this->_Vip[2] == true && Custom[aIndex].VipCount < 1)
@@ -728,7 +734,7 @@ void Commands::ReAdd(int aIndex)
 
 		if (Pontos <= 0)
 		{
-			Func.MsgOutput(aIndex, 1, "Pontos insuficientes para redistribuição!");
+			Func.MsgOutput(aIndex, 1, "Pontos insuficientes para redistribuiÃ§Ã£o!");
 			return;
 		}
 
@@ -752,7 +758,7 @@ void Commands::ReAdd(int aIndex)
 
 		Func.UpdateCharacter(aIndex, false);
 
-		Func.MsgOutput(aIndex, 1, "%d disponiveis para distribuição.", gObj[aIndex].LevelUpPoint);
+		Func.MsgOutput(aIndex, 1, "%d disponiveis para distribuiÃ§Ã£o.", gObj[aIndex].LevelUpPoint);
 	}
 }
 
@@ -762,12 +768,12 @@ void Commands::Clear(int aIndex)
 	{
 		if (gObj[aIndex].Level < this->_Level[3])
 		{
-			Func.MsgOutput(aIndex, 1, "É necessário %d de level.", this->_Level[3]);
+			Func.MsgOutput(aIndex, 1, "Ã‰ necessÃ¡rio %d de level.", this->_Level[3]);
 			return;
 		}
 		else if (gObj[aIndex].Money < this->_Zen[3])
 		{
-			Func.MsgOutput(aIndex, 1, "É necessário %d de zen.", this->_Zen[3]);
+			Func.MsgOutput(aIndex, 1, "Ã‰ necessÃ¡rio %d de zen.", this->_Zen[3]);
 			return;
 		}
 		else if (this->_Vip[3] == true && Custom[aIndex].VipCount < 1)
@@ -801,7 +807,7 @@ void Commands::Clear(int aIndex)
 			}
 			else
 			{
-				Func.MsgOutput(aIndex, 1, "Você não é pk nem hero.");
+				Func.MsgOutput(aIndex, 1, "VocÃª nÃ£o Ã© pk nem hero.");
 			}
 		}
 	}
@@ -813,12 +819,12 @@ void Commands::Killer(int aIndex)
 	{
 		if (gObj[aIndex].Level < this->_Level[6])
 		{
-			Func.MsgOutput(aIndex, 1, "É necessário %d de level.", this->_Level[6]);
+			Func.MsgOutput(aIndex, 1, "Ã‰ necessÃ¡rio %d de level.", this->_Level[6]);
 			return;
 		}
 		else if (gObj[aIndex].Money < this->_Zen[6])
 		{
-			Func.MsgOutput(aIndex, 1, "É necessário %d de zen.", this->_Zen[6]);
+			Func.MsgOutput(aIndex, 1, "Ã‰ necessÃ¡rio %d de zen.", this->_Zen[6]);
 			return;
 		}
 		else if (this->_Vip[5] == true && Custom[aIndex].VipCount < 1)
@@ -836,11 +842,11 @@ void Commands::Killer(int aIndex)
 
 				GCPkLevelSend(aIndex, gObj[aIndex].m_PK_Level);
 
-				Func.MsgOutput(aIndex, 1, "Você agora é um assassino.");
+				Func.MsgOutput(aIndex, 1, "VocÃª agora Ã© um assassino.");
 			}
 			else
 			{
-				Func.MsgOutput(aIndex, 1, "Você já é um assassino.");
+				Func.MsgOutput(aIndex, 1, "VocÃª jÃ¡ Ã© um assassino.");
 			}
 		}
 	}
@@ -855,22 +861,22 @@ void Commands::Ware(int aIndex, char* msg)
 		if (strlen(msg) < 1 || Custom[aIndex].Ware < 0)
 		{
 			Func.MsgOutput(aIndex, 1, "Erro de sintaxe!");
-			Func.MsgOutput(aIndex, 1, "Digite: %s <Número>", this->_Syntax[7]);
+			Func.MsgOutput(aIndex, 1, "Digite: %s <NÃºmero>", this->_Syntax[7]);
 			return;
 		}
 		else if (gObj[aIndex].Level < this->_Level[4])
 		{
-			Func.MsgOutput(aIndex, 1, "É necessário %d de level.", this->_Level[4]);
+			Func.MsgOutput(aIndex, 1, "Ã‰ necessÃ¡rio %d de level.", this->_Level[4]);
 			return;
 		}
 		else if (gObj[aIndex].Money < this->_Zen[4])
 		{
-			Func.MsgOutput(aIndex, 1, "É necessário %d de zen.", this->_Zen[4]);
+			Func.MsgOutput(aIndex, 1, "Ã‰ necessÃ¡rio %d de zen.", this->_Zen[4]);
 			return;
 		}
 		else if (gObj[aIndex].m_IfState.use != 0)
 		{
-			Func.MsgOutput(aIndex, 1, "Feche todas as janelas para mudar de baú.");
+			Func.MsgOutput(aIndex, 1, "Feche todas as janelas para mudar de baÃº.");
 			return;
 		}
 
@@ -878,17 +884,17 @@ void Commands::Ware(int aIndex, char* msg)
 
 		if (Custom[aIndex].Ware > this->_Ware[Custom[aIndex].VipCount] && this->_Type == 0)
 		{
-			Func.MsgOutput(aIndex, 1, "O seu limite de baús é %d", this->_Ware[Custom[aIndex].VipCount]);
+			Func.MsgOutput(aIndex, 1, "O seu limite de baÃºs Ã© %d", this->_Ware[Custom[aIndex].VipCount]);
 			return;
 		}
 		else if (Custom[aIndex].Ware > Custom[aIndex].Vault[1] && this->_Type == 1)
 		{
-			Func.MsgOutput(aIndex, 1, "O seu limite de baús é %d", Custom[aIndex].Vault[1]);
+			Func.MsgOutput(aIndex, 1, "O seu limite de baÃºs Ã© %d", Custom[aIndex].Vault[1]);
 			return;
 		}
 		else if (Custom[aIndex].Vault[0] == Custom[aIndex].Ware)
 		{
-			Func.MsgOutput(aIndex, 1, "O baú %d já está sendo utilizado.", Custom[aIndex].Ware);
+			Func.MsgOutput(aIndex, 1, "O baÃº %d jÃ¡ estÃ¡ sendo utilizado.", Custom[aIndex].Ware);
 			return;
 		}
 
@@ -924,7 +930,7 @@ void Commands::Change(int aIndex)
 
 			gObj[aIndex].m_ReqWarehouseOpen = true;
 
-			Func.MsgOutput(aIndex, 1, "Selecionando baú em %d %s", i, (i == 1) ? "segundo." : "segundos.");
+			Func.MsgOutput(aIndex, 1, "Selecionando baÃº em %d %s", i, (i == 1) ? "segundo." : "segundos.");
 
 			if (i == 3)
 			{
@@ -934,7 +940,7 @@ void Commands::Change(int aIndex)
 			{
 				gObj[aIndex].m_ReqWarehouseOpen = false;
 
-				Func.MsgOutput(aIndex, 1, "O baú %d foi selecionado com sucesso.", Custom[aIndex].Ware);
+				Func.MsgOutput(aIndex, 1, "O baÃº %d foi selecionado com sucesso.", Custom[aIndex].Ware);
 			}
 
 			Sleep(1000);
@@ -977,12 +983,12 @@ void Commands::Premiar(int aIndex, char* msg)
 		{
 			Func.MsgOutput(aIndex, 1, "Erro de sintaxe!");
 			Func.MsgOutput(aIndex, 1, "Digite: %s <Nome> <Valor>", this->_Syntax[10]);
-			Func.MsgOutput(aIndex, 1, "Limite de 100 por premiação!");
+			Func.MsgOutput(aIndex, 1, "Limite de 100 por premiaÃ§Ã£o!");
 			return;
 		}
 		else if (gObj[Index].Connected < 3)
 		{
-			Func.MsgOutput(aIndex, 1, "O Personagem não se encontra.");
+			Func.MsgOutput(aIndex, 1, "O Personagem nÃ£o se encontra.");
 			return;
 		}
 
@@ -991,7 +997,7 @@ void Commands::Premiar(int aIndex, char* msg)
 		Func.AllServerAnnounce(this->_Notice, this->_Name[0], this->_Number);
 
 		Log2("GameMaster: %s", gObj[aIndex].Name);
-		Log2("Jogador: %s, Prêmio: %d", gObj[Index].Name, this->_Number);
+		Log2("Jogador: %s, PrÃªmio: %d", gObj[Index].Name, this->_Number);
 	}
 }
 
@@ -1037,12 +1043,12 @@ void Commands::Skin(int aIndex, char* msg)
 		if (strlen(msg) < 1)
 		{
 			Func.MsgOutput(aIndex, 1, "Erro de sintaxe!");
-			Func.MsgOutput(aIndex, 1, "Digite: %s <Nome> <Número>", this->_Syntax[12]);
+			Func.MsgOutput(aIndex, 1, "Digite: %s <Nome> <NÃºmero>", this->_Syntax[12]);
 			return;
 		}
 		else if (gObj[Index].Connected < 3)
 		{
-			Func.MsgOutput(aIndex, 1, "Personagem não se encontra.");
+			Func.MsgOutput(aIndex, 1, "Personagem nÃ£o se encontra.");
 			return;
 		}
 
@@ -1082,7 +1088,7 @@ void Commands::Move(int aIndex, char* msg)
 		}
 		else if (gObj[Index].Connected < 3)
 		{
-			Func.MsgOutput(aIndex, 1, "Personagem não se encontra.");
+			Func.MsgOutput(aIndex, 1, "Personagem nÃ£o se encontra.");
 			return;
 		}
 
@@ -1090,13 +1096,13 @@ void Commands::Move(int aIndex, char* msg)
 
 		if (Index == aIndex)
 		{
-			Func.MsgOutput(aIndex, 1, "Você foi movido com sucesso.");
+			Func.MsgOutput(aIndex, 1, "VocÃª foi movido com sucesso.");
 		}
 		else
 		{
 			Func.MsgOutput(aIndex, 1, "Movido com sucesso.");
 
-			Func.MsgOutput(Index, 1, "Você foi movido por %s", gObj[aIndex].Name);
+			Func.MsgOutput(Index, 1, "VocÃª foi movido por %s", gObj[aIndex].Name);
 		}
 	}
 }
@@ -1150,12 +1156,12 @@ void Commands::Register(int aIndex)
 	{
 		if (Custom[aIndex].Waiting == true)
 		{
-			Func.MsgOutput(aIndex, 1, "Você já está registrado no evento. Aguarde.");
+			Func.MsgOutput(aIndex, 1, "VocÃª jÃ¡ estÃ¡ registrado no evento. Aguarde.");
 			return;
 		}
 		else if (this->_Event == true)
 		{
-			Func.MsgOutput(aIndex, 1, "Aguarde você será movido em instantes.");
+			Func.MsgOutput(aIndex, 1, "Aguarde vocÃª serÃ¡ movido em instantes.");
 
 			Custom[aIndex].Waiting = true;
 		}
@@ -1185,7 +1191,7 @@ void Commands::Run(void * lpParam)
 		Sleep(1000);
 	}
 
-	Func.AllServerAnnounce("Inscrições para o evento encerradas!");
+	Func.AllServerAnnounce("InscriÃ§Ãµes para o evento encerradas!");
 
 	Command._Event = false; Command._Count = 0;
 
@@ -1222,7 +1228,7 @@ void Commands::Disconnect(int aIndex, char* msg)
 
 		if (gObj[Index].Connected < 3)
 		{
-			Func.MsgOutput(aIndex, 1, "Personagem não se encontra.");
+			Func.MsgOutput(aIndex, 1, "Personagem nÃ£o se encontra.");
 			return;
 		}
 
@@ -1265,7 +1271,7 @@ bool Commands::War(int aIndex, char* msg)
 	}
 	else if (!_stricmp(msg, gObj[aIndex].GuildName))
 	{
-		Func.MsgOutput(aIndex, 1, "Proibido war contra a própria guild!");
+		Func.MsgOutput(aIndex, 1, "Proibido war contra a prÃ³pria guild!");
 		return false;
 	}
 
@@ -1291,7 +1297,7 @@ void Commands::Track(int aIndex, char* msg)
 
 		if (gObj[Index].Connected < 3)
 		{
-			Func.MsgOutput(aIndex, 1, "Personagem não se encontra.");
+			Func.MsgOutput(aIndex, 1, "Personagem nÃ£o se encontra.");
 			return;
 		}
 
@@ -1318,7 +1324,7 @@ void Commands::Trace(int aIndex, char* msg)
 
 		if (gObj[Index].Connected < 3)
 		{
-			Func.MsgOutput(aIndex, 1, "Personagem não se encontra.");
+			Func.MsgOutput(aIndex, 1, "Personagem nÃ£o se encontra.");
 			return;
 		}
 
@@ -1343,7 +1349,7 @@ void Commands::Class(int aIndex, int Type)
 		}
 		else if (gObj[aIndex].m_RecallMon >= 0)
 		{
-			Func.MsgOutput(aIndex, 1, "Remova a invocação para executar o comando.");
+			Func.MsgOutput(aIndex, 1, "Remova a invocaÃ§Ã£o para executar o comando.");
 			return;
 		}
 
@@ -1449,7 +1455,7 @@ void Commands::Class(int aIndex, int Type)
 	}
 	else
 	{
-	    Func.MsgOutput(aIndex, 1, "Você não possui o plano vip necessário!");
+	    Func.MsgOutput(aIndex, 1, "VocÃª nÃ£o possui o plano vip necessÃ¡rio!");
     }
 }
 
@@ -1461,19 +1467,19 @@ void Commands::Information(int aIndex)
 
 	int ResetsDay = Manager.CountDay(gObj[aIndex].Name);
 
-	Func.MsgOutput(aIndex, 0, "Resets: %d, Event Points: %d, Cash: %d", Custom[aIndex].ResetCount, Custom[aIndex].MasterPoint, Custom[aIndex].Coin[5]);
-	Func.MsgOutput(aIndex, 0, "Pontos de patentes: %d, Resets Diários: %d", Custom[aIndex].Patent, ResetsDay);
+	Func.MsgOutput(aIndex, 0, "Resets: %d, EventPoint: %d, Cash: %d", Custom[aIndex].ResetCount, Custom[aIndex].MasterPoint, Custom[aIndex].Coin[5]);
+	Func.MsgOutput(aIndex, 0, "Pontos de patentes: %d, Resets DiÃ¡rios: %d", Custom[aIndex].Patent, ResetsDay);
 
 	switch (Custom[aIndex].VipCount)
 	{
 	case 0:
-		Func.MsgOutput(aIndex, 0, "Sua conta é: Free");
+		Func.MsgOutput(aIndex, 0, "Sua conta Ã©: Free");
 		break;
 	case 1:
-		Func.MsgOutput(aIndex, 0, "Sua conta é: VIP Bonus");
+		Func.MsgOutput(aIndex, 0, "Sua conta Ã©: VIP Bonus");
 		break;
 	case 2:
-		Func.MsgOutput(aIndex, 0, "Sua conta é: VIP Premium");
+		Func.MsgOutput(aIndex, 0, "Sua conta Ã©: VIP Premium");
 		break;
 	}
 }
@@ -1484,7 +1490,7 @@ void Commands::Nick(int aIndex, char* msg)
 	{
 		if (gObj[aIndex].GuildNumber > 0)
 		{
-			Func.MsgOutput(aIndex, 1, "Necessário sair da guild para efetuar a troca.");
+			Func.MsgOutput(aIndex, 1, "NecessÃ¡rio sair da guild para efetuar a troca.");
 			return;
 		}
 
@@ -1495,17 +1501,17 @@ void Commands::Nick(int aIndex, char* msg)
 
 		if (strlen(msg) <= 4 || strlen(msg) >= 11)
 		{
-			Func.MsgOutput(aIndex, 1, "Necessário 4 a 10 dígitos para efetuar a troca.");
+			Func.MsgOutput(aIndex, 1, "NecessÃ¡rio 4 a 10 dÃ­gitos para efetuar a troca.");
 			return;
 		}
 		else if (Func.CheckString(msg) == false)
 		{
-			Func.MsgOutput(aIndex, 1, "Você utilizou caracteres inválidos!");
+			Func.MsgOutput(aIndex, 1, "VocÃª utilizou caracteres invÃ¡lidos!");
 			return;
 		}
 		else if (Manager.CheckNick(aIndex, msg))
 		{
-			Func.MsgOutput(aIndex, 1, "O nome de usuário já existe!");
+			Func.MsgOutput(aIndex, 1, "O nome de usuÃ¡rio jÃ¡ existe!");
 			return;
 		}
 
@@ -1513,7 +1519,7 @@ void Commands::Nick(int aIndex, char* msg)
 
 		if (Custom[aIndex].Coin[3] < 15000)
 		{
-			Func.MsgOutput(aIndex, 1, "É necessário 15000 de Golds.");
+			Func.MsgOutput(aIndex, 1, "Ã‰ necessÃ¡rio 15000 de Golds.");
 			return;
 		}
 
@@ -1550,7 +1556,7 @@ void Commands::Nick(int aIndex, char* msg)
 	}
 	else
 	{
-		Func.MsgOutput(aIndex, 1, "Você não possui o plano vip necessário!");
+		Func.MsgOutput(aIndex, 1, "VocÃª nÃ£o possui o plano vip necessÃ¡rio!");
 	}
 }
 
@@ -1574,7 +1580,7 @@ void Commands::Rei(int aIndex, char* msg)
 		}
 		else if (gObj[Index].Connected < 3)
 		{
-			Func.MsgOutput(aIndex, 1, "O jogador não está online!");
+			Func.MsgOutput(aIndex, 1, "O jogador nÃ£o estÃ¡ online!");
 			return;
 		}
 
@@ -1582,7 +1588,7 @@ void Commands::Rei(int aIndex, char* msg)
 
 		Manager.ExecFormat("UPDATE Character SET ReiEvent = ReiEvent + %d WHERE Name = '%s'", this->_Number, gObj[Index].Name);
 
-		Func.AllServerAnnounce("%s é o novo Rei do Mu Fenix!", this->_Name[0], this->_Number);
+		Func.AllServerAnnounce("%s Ã© o novo Rei do Mu Fenix!", this->_Name[0], this->_Number);
 	}
 }
 
@@ -1808,7 +1814,7 @@ void Commands::OpenWare(int aIndex)
 
 	if (gObj[aIndex].Live == 0)
 	{
-		Func.MsgOutput(aIndex, 1, "Você não pode usar o baú morto.");
+		Func.MsgOutput(aIndex, 1, "VocÃª nÃ£o pode usar o baÃº morto.");
 		return;
 	}
 
@@ -1822,7 +1828,7 @@ void Commands::OpenWare(int aIndex)
 
 	if (Custom[aIndex].Delay[1] < 10)
 	{
-		Func.MsgOutput(aIndex, 1, "Aguarde %d %s para usar o baú.",(10 - Custom[aIndex].Delay[1]),(10 - Custom[aIndex].Delay[1] == 1) ? "segundo" : "segundos");
+		Func.MsgOutput(aIndex, 1, "Aguarde %d %s para usar o baÃº.",(10 - Custom[aIndex].Delay[1]),(10 - Custom[aIndex].Delay[1] == 1) ? "segundo" : "segundos");
 		return;
 	}
 
@@ -1839,8 +1845,137 @@ void Commands::OpenWare(int aIndex)
 
 	Custom[aIndex].Delay[2] = GetTickCount();
 
-	Func.MsgOutput(aIndex, 1, "Solicitando abertura do baú...");
+	Func.MsgOutput(aIndex, 1, "Solicitando abertura do baÃº...");
+}
+
+// [ Novo ]: Comando para testar eventos
+bool Commands::TestEvent(int aIndex, const char* Text)
+{
+	LPOBJ lpObj = &gObj[aIndex];
+
+	if (Authority.Check(lpObj, 9) == false)
+	{
+		return false;
+	}
+
+	char Cmd[60] = { 0 };
+	char Arg[60] = { 0 };
+	char Buffer[60] = { 0 };
+	char* Token = nullptr;
+	char* Context = nullptr;
+
+	strcpy_s(Buffer, Text);
+
+	Token = strtok_s(Buffer, " ", &Context);
+	if (!Token) return false;
+	strcpy_s(Cmd, Token);
+
+	Token = strtok_s(nullptr, " ", &Context);
+	if (Token) strcpy_s(Arg, Token);
+
+	// Pascoa
+	if (!_stricmp(Cmd, Pascoa._Syntax[2]) && !_stricmp(Arg, Pascoa._Syntax[3]))
+	{
+		Pascoa.StartManual();
+		Func.MsgOutput(aIndex, 1, "[Aviso]: Teste do evento Pascoa iniciado.");
+		return true;
+	}
+
+	// Natal
+	if (!_stricmp(Cmd, Natal._Syntax[2]) && !_stricmp(Arg, Natal._Syntax[3]))
+	{
+		Natal.StartManual();
+		Func.MsgOutput(aIndex, 1, "[Aviso]: Teste do evento Natal iniciado.");
+		return true;
+	}
+
+	// Treasure
+	if (!_stricmp(Cmd, Treasure._Syntax[2]) && !_stricmp(Arg, Treasure._Syntax[3]))
+	{
+		Treasure.StartManual();
+		Func.MsgOutput(aIndex, 1, "[Aviso]: Teste do evento Treasure iniciado.");
+		return true;
+	}
+
+	// DuelEvent
+	if (!_stricmp(Cmd, DuelEvent._Syntax[2]) && !_stricmp(Arg, DuelEvent._Syntax[3]))
+	{
+		DuelEvent.Start(1, 4);
+		Func.MsgOutput(aIndex, 1, "[Aviso]: Teste do evento Duel iniciado.");
+		return true;
+	}
+
+	// KingEvent
+	if (!_stricmp(Cmd, KingEvent._Syntax[2]) && !_stricmp(Arg, KingEvent._Syntax[3]))
+	{
+		KingEvent.Start(1, 4);
+		Func.MsgOutput(aIndex, 1, "[Aviso]: Teste do evento King iniciado.");
+		return true;
+	}
+
+	// UfcEvent
+	if (!_stricmp(Cmd, UfcEvent._Syntax[2]) && !_stricmp(Arg, UfcEvent._Syntax[3]))
+	{
+		UfcEvent.Start(1, 4);
+		Func.MsgOutput(aIndex, 1, "[Aviso]: Teste do evento Ufc iniciado.");
+		return true;
+	}
+
+	// BattleEvent
+	if (!_stricmp(Cmd, BattleEvent._Syntax[2]) && !_stricmp(Arg, BattleEvent._Syntax[3]))
+	{
+		BattleEvent.Start(1, 4);
+		Func.MsgOutput(aIndex, 1, "[Aviso]: Teste do evento Battle iniciado.");
+		return true;
+	}
+
+	// PegaEvent
+	if (!_stricmp(Cmd, PegaEvent._Syntax[2]) && !_stricmp(Arg, PegaEvent._Syntax[3]))
+	{
+		PegaEvent.Start(1);
+		Func.MsgOutput(aIndex, 1, "[Aviso]: Teste do evento Pega iniciado.");
+		return true;
+	}
+
+	// SobreEvent
+	if (!_stricmp(Cmd, SobreEvent._Syntax[2]) && !_stricmp(Arg, SobreEvent._Syntax[3]))
+	{
+		SobreEvent.Start(1);
+		Func.MsgOutput(aIndex, 1, "[Aviso]: Teste do evento Sobre iniciado.");
+		return true;
+	}
+
+	// QuizEvent
+	if (!_stricmp(Cmd, QuizEvent._Syntax[2]) && !_stricmp(Arg, QuizEvent._Syntax[3]))
+	{
+		QuizEvent.StartManual();
+		Func.MsgOutput(aIndex, 1, "[Aviso]: Teste do evento Quiz iniciado.");
+		return true;
+	}
+
+	// FlagEvent
+	if (!_stricmp(Cmd, FlagEvent._Syntax[2]) && !_stricmp(Arg, FlagEvent._Syntax[3]))
+	{
+		FlagEvent.StartManual();
+		Func.MsgOutput(aIndex, 1, "[Aviso]: Teste do evento Flag iniciado.");
+		return true;
+	}
+
+	// DropEvent
+	if (!_stricmp(Cmd, DropEvent._Syntax[2]) && !_stricmp(Arg, DropEvent._Syntax[3]))
+	{
+		DropEvent.StartManual();
+		Func.MsgOutput(aIndex, 1, "[Aviso]: Teste do evento Drop iniciado.");
+		return true;
+	}
+
+	return false;
 }
 
 
 Commands Command;
+
+
+
+
+

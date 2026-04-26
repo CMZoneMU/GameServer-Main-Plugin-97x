@@ -20,7 +20,8 @@ public:
 public:
 	bool				_Active;
 	bool                _Capturar;
-	char				_Syntax[2][25];
+	char _Syntax[10][25];
+	
 	char                _Notice[3][60];
 	BYTE				_MapNumber;
 	BYTE				_X;
