@@ -7,35 +7,93 @@
 ; # OPT			=	Adicional do item.
 ; # EXE			=	Define se o item é excelente.
 ;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-; #  GROUP	INDEX	       LEVEL	   LUCK        SKILL	    OPT	            EXE            NAME
+; GROUP   INDEX  LEVEL  LUCK   SKILL   OPT     EXE      NAME
 ;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 0
-     7		0		0          1           0	    7               63		//Bronze Helm
-     8		0		0          1           0	    7               63		//Bronze Armor
-     9		0		0          1           0	    7               63		//Bronze Pants
-     10		0		0          1           0	    7               63		//Bronze Glove
-     11		0		0          1           0	    7               63		//Bronze Pants
+; ---------------- DROP MESCLADO ITENS FULL + SEMI ----------------
+
+; Leather
+     7      0      0      1      0      7      63     // Leather Helm FULL
+     8      0      0      1      0      7      10     // Leather Armor Rate + Diminui Dano
+     9      0      0      1      0      7      63     // Leather Pants FULL
+     10     0      0      1      0      7      10     // Leather Gloves Rate + Diminui Dano
+     11     0      0      1      0      7      63     // Leather Boots FULL
+
+; Bronze
+     7      1      0      1      0      7      10     // Bronze Helm Rate + Diminui Dano
+     8      1      0      1      0      7      63     // Bronze Armor FULL
+     9      1      0      1      0      7      10     // Bronze Pants Rate + Diminui Dano
+     10     1      0      1      0      7      63     // Bronze Gloves FULL
+     11     1      0      1      0      7      10     // Bronze Boots Rate + Diminui Dano
+
+; Scale
+     7      2      0      1      0      7      63     // Scale Helm FULL
+     8      2      0      1      0      7      10     // Scale Armor Rate + Diminui Dano
+     9      2      0      1      0      7      63     // Scale Pants FULL
+     10     2      0      1      0      7      10     // Scale Gloves Rate + Diminui Dano
+     11     2      0      1      0      7      63     // Scale Boots FULL
+
+; Plate
+     7      4      0      1      0      7      10     // Plate Helm Rate + Diminui Dano
+     8      4      0      1      0      7      63     // Plate Armor FULL
+     9      4      0      1      0      7      10     // Plate Pants Rate + Diminui Dano
+     10     4      0      1      0      7      63     // Plate Gloves FULL
+     11     4      0      1      0      7      10     // Plate Boots Rate + Diminui Dano
+
+; Dragon
+     7      5      0      1      0      7      63     // Dragon Helm FULL
+     8      5      0      1      0      7      10     // Dragon Armor Rate + Diminui Dano
+     9      5      0      1      0      7      63     // Dragon Pants FULL
+     10     5      0      1      0      7      10     // Dragon Gloves Rate + Diminui Dano
+     11     5      0      1      0      7      63     // Dragon Boots FULL
+
+; Sphinx
+     7      8      0      1      0      7      10     // Sphinx Helm Rate + Diminui Dano
+     8      8      0      1      0      7      63     // Sphinx Armor FULL
+     9      8      0      1      0      7      10     // Sphinx Pants Rate + Diminui Dano
+     10     8      0      1      0      7      63     // Sphinx Gloves FULL
+     11     8      0      1      0      7      10     // Sphinx Boots Rate + Diminui Dano
+
+; Legendary
+     7      9      0      1      0      7      63     // Legendary Helm FULL
+     8      9      0      1      0      7      10     // Legendary Armor Rate + Diminui Dano
+     9      9      0      1      0      7      63     // Legendary Pants FULL
+     10     9      0      1      0      7      10     // Legendary Gloves Rate + Diminui Dano
+     11     9      0      1      0      7      63     // Legendary Boots FULL
+
+; Spirit
+     7      13     0      1      0      7      10     // Spirit Helm Rate + Diminui Dano
+     8      13     0      1      0      7      63     // Spirit Armor FULL
+     9      13     0      1      0      7      10     // Spirit Pants Rate + Diminui Dano
+     10     13     0      1      0      7      63     // Spirit Gloves FULL
+     11     13     0      1      0      7      10     // Spirit Boots Rate + Diminui Dano
+
+; Divine
+     7      15     0      1      0      7      63     // Divine Helm FULL
+     8      15     0      1      0      7      10     // Divine Armor Rate + Diminui Dano
+     9      15     0      1      0      7      63     // Divine Pants FULL
+     10     15     0      1      0      7      10     // Divine Gloves Rate + Diminui Dano
+     11     15     0      1      0      7      63     // Divine Boots FULL
      
-     7		1		0          1           0	    7               63		//Dragon Helm
-     8		1		0          1           0	    7               63		//Dragon Armor
-     9		1		0          1           0	    7               63		//Dragon Pants
-     11		1		0          1           0	    7               63		//Dragon Glover
-     10		1		0          1           0	    7               63		//Dragon Boots
      
-     8		6		0          1           0	    7               63		//Scale Armor
-     9		6		0          1           0	    7               63		//Scale Pants
-     10		6		0          1           0	    7               63		//Scale Glove
-     11		6		0          1           0	    7               63		//Scale Pants
-     7		6		0          1           0	    7               63		//Scale Helm
-     
-     7		5		0          1           0	    7               63		//Leather Helm
-     8		5		0          1           0	    7               63		//Leather Armor
-     9		5		0          1           0	    7               63		//Leather Pants
-     10		5		0          1           0	    7               63		//Leather Gloves
-     11		5		0          1           0	    7               63		//Leather Pants
-     
-     15		20		0          0           0	    0               0 		// "Jewel Adicional"	
-     15		22		0          0           0	    0               0 		// "Feather Of Upgrade"	
-     15		23		0          0           0	    0               0 		// "Jewel Exelent"		
-     
+; Set Index 16
+     7      16     0      1      0      7      10     // Set 16 Helm Rate + Diminui Dano
+     8      16     0      1      0      7      63     // Set 16 Armor FULL
+     9      16     0      1      0      7      10     // Set 16 Pants Rate + Diminui Dano
+     10     16     0      1      0      7      63     // Set 16 Gloves FULL
+     11     16     0      1      0      7      10     // Set 16 Boots Rate + Diminui Dano
+
+; Set Index 18
+     7      18     0      1      0      7      63     // Set 18 Helm FULL
+     8      18     0      1      0      7      10     // Set 18 Armor Rate + Diminui Dano
+     9      18     0      1      0      7      63     // Set 18 Pants FULL
+     10     18     0      1      0      7      10     // Set 18 Gloves Rate + Diminui Dano
+     11     18     0      1      0      7      63     // Set 18 Boots FULL
+
+; Set Index 26
+     7      26     0      1      0      7      10     // Set 26 Helm Rate + Diminui Dano
+     8      26     0      1      0      7      63     // Set 26 Armor FULL
+     9      26     0      1      0      7      10     // Set 26 Pants Rate + Diminui Dano
+     10     26     0      1      0      7      63     // Set 26 Gloves FULL
+     11     26     0      1      0      7      10     // Set 26 Boots Rate + Diminui Dano
 end
